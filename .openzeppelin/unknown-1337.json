@@ -1,0 +1,69 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x3D59AcdfF0CA9a354d991230e2372588a3D996f7",
+    "txHash": "0x1387dbb3b39308643d33583e4b0daf001ccd0eaf388e961c759fc311ccf1988a"
+  },
+  "proxies": [
+    {
+      "address": "0x55490D040e4DA2dAC17086fE23a4b0D15270Fcdb",
+      "txHash": "0x0150b310ef39aac93c09fe74860c8af613eafd43d58f38776fb723d6b4f88013",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "c8b7d2d8f7eeb0f6a44c359a6f89c55e62871bb84de9d28ee8bbe353f523ed60": {
+      "address": "0x91ca4C85ED78f625A2D12F37043Cb2F64dEd39BD",
+      "txHash": "0xd9c5bc8567a0171ce17b0362ab85c16489debcadae3a719c100ce509224d5ea3",
+      "layout": {
+        "solcVersion": "0.8.21",
+        "storage": [
+          {
+            "contract": "XAUTEthereumBridge",
+            "label": "xautToken",
+            "type": "t_contract(IXAUT)519",
+            "src": "../project:/contracts/XAUTEthereumBridge.sol:13"
+          }
+        ],
+        "types": {
+          "t_contract(IXAUT)519": {
+            "label": "contract IXAUT"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
