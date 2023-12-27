@@ -18,10 +18,11 @@
   },
   "homepage": "https://github.com/CertixGold/wXAUT-contracts#readme",
   "dependencies": {
-    "@openzeppelin/contracts": "^5.0.1",
-    "@openzeppelin/contracts-upgradeable": "^5.0.1",
+    "@openzeppelin/contracts": "v4.9.3",
+    "@openzeppelin/contracts-upgradeable": "v4.9.3",
     "@openzeppelin/test-helpers": "^0.5.16",
     "@openzeppelin/truffle-upgrades": "^1.21.0",
+    "@truffle/hdwallet-provider": "^2.1.15",
     "bignumber.js": "^9.1.2",
     "chai": "^4.3.10",
     "chai-bignumber": "^3.1.0"

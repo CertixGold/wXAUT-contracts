@@ -1,114 +1,14 @@
 {
   "manifestVersion": "3.2",
   "admin": {
-    "address": "0xf434F934A2461E93847fA6A55358308E44B7A25e",
-    "txHash": "0xa375653b506e68f0ac2653a47202d34de6451364b576fdd5c250e1d0ba51776a"
+    "address": "0xDf22A2742e77b93111C9Ef3268322495B3986650",
+    "txHash": "0x574e7ee7978600cbdd0811b82f918e0f357f21f16166e16aa20340ab3588c02e"
   },
-  "proxies": [
-    {
-      "address": "0xD1885977Df31D483fCF295b43da8903097b58D70",
-      "txHash": "0x187145ea07295e93ec97c9d95a29f5c21fbf594823b8762b60b23a3518fc2b62",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x0cb69eeE56CBcc5bec5Ff8bdd38B0ADbab43C4B4",
-      "txHash": "0x8cdea24082e52fc80052a93a7adc9aa40a1e259d76b7d64f2f658871378b2599",
-      "kind": "transparent"
-    }
-  ],
+  "proxies": [],
   "impls": {
-    "018da1f3536cfe8e1daf7da51168e144419e29ffcf9dfbe9d7bd73be08485652": {
-      "address": "0xe845aB4C69BC1e45544881A7A866CC0BB7530aF3",
-      "txHash": "0x2d2f03c85d53586b4e8161f2cc0ec041d2ed9108fd90a8b95cf2d5d62a569ff7",
-      "layout": {
-        "solcVersion": "0.8.21",
-        "storage": [
-          {
-            "contract": "CCFBridge",
-            "label": "minimumFees",
-            "type": "t_mapping(t_uint256,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:16"
-          },
-          {
-            "contract": "CCFBridge",
-            "label": "protocolFeePercentage",
-            "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridge.sol:18"
-          },
-          {
-            "contract": "CCFBridge",
-            "label": "totalProtocolFees",
-            "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:20"
-          },
-          {
-            "contract": "CCFBridge",
-            "label": "totalBridgeFees",
-            "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:22"
-          },
-          {
-            "contract": "CCFBridge",
-            "label": "lockedBalance",
-            "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:24"
-          },
-          {
-            "contract": "CCFBridge",
-            "label": "contractBlockchainIndex",
-            "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridge.sol:26"
-          }
-        ],
-        "types": {
-          "t_mapping(t_uint256,t_uint256)": {
-            "label": "mapping(uint256 => uint256)"
-          },
-          "t_uint256": {
-            "label": "uint256"
-          },
-          "t_mapping(t_address,t_uint256)": {
-            "label": "mapping(address => uint256)"
-          },
-          "t_address": {
-            "label": "address"
-          },
-          "t_uint64": {
-            "label": "uint64"
-          },
-          "t_bool": {
-            "label": "bool"
-          }
-        },
-        "namespaces": {
-          "erc7201:openzeppelin.storage.Ownable": [
-            {
-              "contract": "OwnableUpgradeable",
-              "label": "_owner",
-              "type": "t_address",
-              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
-            }
-          ],
-          "erc7201:openzeppelin.storage.Initializable": [
-            {
-              "contract": "Initializable",
-              "label": "_initialized",
-              "type": "t_uint64",
-              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
-            },
-            {
-              "contract": "Initializable",
-              "label": "_initializing",
-              "type": "t_bool",
-              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
-            }
-          ]
-        }
-      }
-    },
     "572c193025a746fab42100140e780c0d61c63802020fe75b4a2018f025e423cc": {
-      "address": "0x1B03fcd0981f3D46DA5bBd0c1135BE9ea91Cf180",
-      "txHash": "0x58f8af96433ab72ebfbe4f4529047cff6a306988ba089892d1e8114e4739927e",
+      "address": "0x1038B4348Dbc1D8E107FF4a6b6bf648f6D990EAa",
+      "txHash": "0x61afd85eae92581f68808137cf3a309f1a5432e6f678d36533bfbdbffc424ab4",
       "layout": {
         "solcVersion": "0.8.21",
         "storage": [
