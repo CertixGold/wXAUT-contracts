@@ -94,7 +94,7 @@ module.exports = {
     arb_sepolia: {
       provider: () => new HDWalletProvider(privateKey, 'https://arbitrum-sepolia.infura.io/v3/'+infuraKey),
       network_id: 421614, // ID de réseau pour Sepolia
-      gas: 6000000, // Augmentez cette valeur
+      //gas: 6500000, // Augmentez cette valeur
       //gasPrice: 20000000000, // Définissez manuellement si nécessaire
       confirmations: 1,
       timeoutBlocks: 200,
@@ -108,10 +108,9 @@ module.exports = {
       timeoutBlocks: 200,
       skipDryRun: true
     },
-    bsc : {
-      provider: () => new HDWalletProvider(privateKey, 'https://rpc.ankr.com/bsc_testnet_chapel/865aef6e31e4f9933b754383ccc5c81debc4d7a2b494470cd42bebb1533ac95a'),
-      gas: 7000000, // Augmentez cette valeur
-      gasPrice: 40000000000, // Définissez manuellement si nécessaire
+    bsc_testnet : {
+      provider: () => new HDWalletProvider(privateKey, 'https://data-seed-prebsc-2-s1.binance.org:8545/'),
+      //gas: 9000000, // Augmentez cette valeur
       network_id: 97, // ID de réseau pour Sepolia
       confirmations: 1,
       skipDryRun: true

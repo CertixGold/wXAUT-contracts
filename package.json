@@ -25,6 +25,7 @@
     "@truffle/hdwallet-provider": "^2.1.15",
     "bignumber.js": "^9.1.2",
     "chai": "^4.3.10",
-    "chai-bignumber": "^3.1.0"
+    "chai-bignumber": "^3.1.0",
+    "dotenv": "^16.3.1"
   }
 }

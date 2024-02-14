@@ -28,8 +28,7 @@ contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
         __ERC20Burnable_init(); // Initialisation de ERC20Burnable
         __Ownable_init();
 
-        protocolFeePercentage = 2000; //0.2%
-        minimumFees[0] = 150000000000000;
+        protocolFeePercentage = 3000; //0.3%
         updateContractBlockchainIndex(_contractBlockchainIndex);
     }
 
@@ -56,8 +55,17 @@ contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
     }
 
     // Update minimum fee for a specific blockchain
-    function updateMinimumFee(uint256 blockchainIndex, uint256 fee) external onlyOwner {
+    function updateMinimumFee(uint256 blockchainIndex, uint256 fee) public onlyOwner {
         minimumFees[blockchainIndex] = fee;
+    }
+
+    // Update minimum fees by batch
+    function updateMinimumFeesBatch(uint256[] memory blockchainIndexes, uint256[] memory fees) external onlyOwner {
+        require(blockchainIndexes.length == fees.length, "Lengths of arrays do not match");
+
+        for (uint256 i = 0; i < blockchainIndexes.length; i++) {
+            updateMinimumFee(blockchainIndexes[i], fees[i]);
+        }
     }
 
     // Update the protocol fee percentage

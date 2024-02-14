@@ -1,0 +1,119 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0xc1533138E6F7D3601699e8f9d90f1B57aAa00813",
+    "txHash": "0x0623a1ddabfc843e6549365beb295b02c98c7ebbbfb8bce4dd6f6d9785c8efe7"
+  },
+  "proxies": [
+    {
+      "address": "0xd5e4677917F5E9350A365f27ff18248d5818A5C6",
+      "txHash": "0x0d3d9e2faff5c674ef02feb37dab2c9621ab8ca152e9ca4554cfce1c225829b0",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "18cbc8cd97a3f28c2bf70c489f83f158710a37a1e29beb2a3ce8a855d683ca98": {
+      "address": "0xCC585319DAa969C6af747880029A034aD0470220",
+      "txHash": "0xd08e565eb48ce3504b2bfa34d81fbf8bed771005af5bcab778fc0920d382ae05",
+      "layout": {
+        "solcVersion": "0.8.19",
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_uint8",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:63",
+            "retypedFrom": "bool"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:68"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "minimumFees",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:16"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "protocolFeePercentage",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFBridge.sol:18"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "totalProtocolFees",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:20"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "totalBridgeFees",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:22"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "lockedBalance",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:24"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "contractBlockchainIndex",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFBridge.sol:26"
+          }
+        ],
+        "types": {
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        },
+        "namespaces": {}
+      }
+    }
+  }
+}
