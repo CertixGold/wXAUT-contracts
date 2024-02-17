@@ -1,0 +1,237 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x4417E577B2B9bd97dC0DFa422a8814511Da5b524",
+    "txHash": "0x579bfecf6feb52dc0fdf582d5163e423a46d56470e7f062d0f5cbbb88b3ef24e"
+  },
+  "proxies": [
+    {
+      "address": "0xaB9C06534cDbd6687CF2baF2DDD2BA06848EE51C",
+      "txHash": "0xea3b61edd0fdb72539ed74afba2e002b1761140aefd807bcd0ea9c159a7dfb49",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x6405dd4DAe0cf5dcaAB2764f339F84444d2Cba82",
+      "txHash": "0xbaaefdc906bfb8d13b5539de1a5df2edffe5e0e23248984bfd59dde566881e15",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "38df1148ec3cddbfe52a1124e8e6f0278b042710c8d9860d893bce69c7f960da": {
+      "address": "0xfFB1F7566cC861Ae5942fff69285CCfaA1B17f7e",
+      "txHash": "0xce175f80174884ea0574fad072bb943d505981ce0e4c77176f7c6dc38fb959ab",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "contract": "CCFBridge",
+            "label": "minimumFees",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:16"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "protocolFeePercentage",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFBridge.sol:18"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "totalProtocolFees",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:20"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "totalBridgeFees",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:22"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "lockedBalance",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:24"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "contractBlockchainIndex",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFBridge.sol:26"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "protocolFeeDivider",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFBridge.sol:28"
+          }
+        ],
+        "types": {
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "1edc368f1545df64f4c3d9647ade4ed6eec089e9947add92d948a88f362d46e4": {
+      "address": "0x74Bd32F8258Fd28F2a4c463C1733f1f2e4C69400",
+      "txHash": "0xb679e9df07deb8f0876958a1abb810f7a6e1c519fd324c0ffa6004601a979585",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "contract": "CCFToken",
+            "label": "minimumFees",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "src": "../project:/contracts/CCFToken.sol:12"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "protocolFeePercentage",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:14"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalProtocolFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:16"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalBridgeFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:18"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "contractBlockchainIndex",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:20"
+          }
+        ],
+        "types": {
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC20": [
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:38"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:40"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:42"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:44"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:45"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

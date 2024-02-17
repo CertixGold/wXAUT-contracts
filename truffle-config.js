@@ -43,14 +43,23 @@
  */
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const IS_PROD = false
+const IS_PROD = true
 
 require('dotenv').config({
   path: IS_PROD ? '.env.production' : '.env.development'
 });
 
 const privateKey = process.env.PRIVATE_KEY;
-const infuraKey = process.env.INFURA_API_KEY;
+const ETH_SEPOLIA_RPC = process.env.ETH_SEPOLIA_RPC;
+const ARB_SEPOLIA_RPC = process.env.ARB_SEPOLIA_RPC;
+const BSC_TESTNET_RPC = process.env.BSC_TESTNET_RPC;
+const MUMBAI_RPC = process.env.MUMBAI_RPC;
+
+const ETH_RPC = process.env.ETH_RPC;
+const ARB_RPC = process.env.ARB_RPC;
+const BSC_RPC = process.env.BSC_RPC;
+const POLYGON_RPC = process.env.POLYGON_RPC;
+
 
 module.exports = {
   /**
@@ -64,36 +73,53 @@ module.exports = {
    */
 
   networks: {
-    // Useful for testing. The `development` name is special - truffle uses it by default
-    // if it's defined here and no other network is specified at the command line.
-    // You should run a client (like ganache, geth, or parity) in a separate terminal
-    // tab if you use this network and you must also set the `host`, `port` and `network_id`
-    // options below to some value.
-    //
      development: {
       host: "127.0.0.1",     // Localhost (default: none)
       port: 8545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
      },
-     arb: {
-      provider: () => new HDWalletProvider(privateKey, 'https://arbitrum.blockpi.network/v1/rpc/public'),
-      network_id: 42161, // ID de réseau pour Sepolia
-      //gasPrice: 1000000000, // Définissez manuellement si nécessaire
+     eth: {
+      provider: () => new HDWalletProvider(privateKey, ETH_RPC),
+      network_id: 1, 
       confirmations: 1,
       timeoutBlocks: 200,
-      skipDryRun: true
+      skipDryRun: false
+    },
+     arb: {
+      provider: () => new HDWalletProvider(privateKey, ARB_RPC),
+      network_id: 42161, 
+      confirmations: 1,
+      timeoutBlocks: 200,
+      skipDryRun: false
+    },
+    bsc: {
+      provider: () => new HDWalletProvider(privateKey, BSC_RPC),
+      network_id: 56, 
+      confirmations: 1,
+      timeoutBlocks: 200,
+      /*maxPriorityFeePerGas: 3000000000,
+      maxFeePerGas: 100000000000,*/
+      gasPrice: 20000000000,
+      skipDryRun: false
+    },
+    polygon: {
+      provider: () => new HDWalletProvider(privateKey, POLYGON_RPC),
+      network_id: 137, 
+      gasPrice: 100000000000,
+      //gas: 9900000, // Augmentez cette valeur
+      gasPrice: 500000000000, // Définissez manuellement si nécessaire
     },
      sepolia: {
-      provider: () => new HDWalletProvider(privateKey, 'https://sepolia.infura.io/v3/'+infuraKey),
-      network_id: 11155111, // ID de réseau pour Sepolia
+      provider: () => new HDWalletProvider(privateKey, ETH_SEPOLIA_RPC),
+      network_id: 11155111, 
       gas: 5500000, // Limite de gaz
       confirmations: 1,
       timeoutBlocks: 200,
       skipDryRun: true
     },
     arb_sepolia: {
-      provider: () => new HDWalletProvider(privateKey, 'https://arbitrum-sepolia.infura.io/v3/'+infuraKey),
-      network_id: 421614, // ID de réseau pour Sepolia
+      provider: () => new HDWalletProvider(privateKey, ARB_SEPOLIA_RPC),
+      network_id: 421614, 
       //gas: 6500000, // Augmentez cette valeur
       //gasPrice: 20000000000, // Définissez manuellement si nécessaire
       confirmations: 1,
@@ -101,17 +127,18 @@ module.exports = {
       skipDryRun: true
     },
     mumbai : {
-      provider: () => new HDWalletProvider(privateKey, 'https://polygon-mumbai.infura.io/v3/'+infuraKey),
-      network_id: 80001, // ID de réseau pour Sepolia
+      provider: () => new HDWalletProvider(privateKey, MUMBAI_RPC),
+      network_id: 80001, 
       gas: 5500000, // Limite de gaz
       confirmations: 1,
       timeoutBlocks: 200,
       skipDryRun: true
     },
     bsc_testnet : {
-      provider: () => new HDWalletProvider(privateKey, 'https://data-seed-prebsc-2-s1.binance.org:8545/'),
-      //gas: 9000000, // Augmentez cette valeur
-      network_id: 97, // ID de réseau pour Sepolia
+      provider: () => new HDWalletProvider(privateKey, BSC_TESTNET_RPC),
+      network_id: 97, 
+      gas: 5500000, // Limite de gaz
+      gasPrice: 20000000000,
       confirmations: 1,
       skipDryRun: true
     }
@@ -152,24 +179,16 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "0.8.19",      // Fetch exact version from solc-bin (default: truffle's version)
-      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-      // settings: {          // See the solidity docs for advice about optimization and evmVersion
-      //  optimizer: {
-      //    enabled: false,
-      //    runs: 200
-      //  },
-      //  evmVersion: "byzantium"
-      // }
+      version: "0.8.20"
     }
   },
 
   solidity: {
-      version: "0.8.19",
+      version: "0.8.20",
       settings: {
         optimizer: {
           enabled: true,
-          runs: 1000,
+          runs: 200,//
         },
     }
   }

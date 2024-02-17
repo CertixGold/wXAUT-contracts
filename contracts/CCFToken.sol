@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20BurnableUpgradeable.sol";
@@ -26,7 +26,7 @@ contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
     function initialize(string memory _name, string memory _symbol, uint256 _contractBlockchainIndex) public initializer {
         __ERC20_init(_name, _symbol); // Initialisation du nom et du symbole du token
         __ERC20Burnable_init(); // Initialisation de ERC20Burnable
-        __Ownable_init();
+        __Ownable_init(msg.sender);
 
         protocolFeePercentage = 3000; //0.3%
         updateContractBlockchainIndex(_contractBlockchainIndex);
@@ -39,6 +39,7 @@ contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
     // Burnt CCF tokens with specified bridge and protocol fees
     function bridge(uint256 amount, uint256 bridgeFee, uint256 blockchainIndex) external {
         require(blockchainIndex != contractBlockchainIndex, "Choose another blockchain");
+        require(amount > 0, "Specify a correct amount.");
         require(bridgeFee >= minimumFees[blockchainIndex], "Bridge fee is too low");
 
         uint256 protocolFee = (amount * protocolFeePercentage) / 1000000; // Calculate protocol fee

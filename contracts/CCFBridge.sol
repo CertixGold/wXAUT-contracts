@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
@@ -22,8 +22,10 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
     mapping(address => uint256) public totalBridgeFees;
     // Total locked CCFToken balance
     mapping(address => uint256) public lockedBalance;
-     //Blockchain which hosts the contract
+    //Blockchain which hosts the contract
     uint256 contractBlockchainIndex;
+    //Blockchain which hosts the contract
+    uint256 protocolFeeDivider;
 
     // Event emitted when CCFToken is locked
     event Locked(address token, address indexed user, uint256 amount, uint256 protocolFee, uint256 bridgeFee, uint256 blockchainIndex);
@@ -32,9 +34,10 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
 
     // Initialize the contract with the CCFToken token address
     function initialize(uint256 _contractBlockchainIndex) public initializer {
-        __Ownable_init();//msg.sender
+        __Ownable_init(msg.sender);
 
-        protocolFeePercentage = 3000; //0.3%
+        updateProtocolFeePercentage(3000); //0.3%
+        updateProtocolFeeDivider(1000000);
         updateContractBlockchainIndex(_contractBlockchainIndex);
     }
 
@@ -43,7 +46,7 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
         require(blockchainIndex != contractBlockchainIndex, "Choose another blockchain");
         require(bridgeFee >= minimumFees[blockchainIndex], "Bridge fee is too low");
 
-        uint256 protocolFee = (amount * protocolFeePercentage) / 1000000; // Calculate protocol fee
+        uint256 protocolFee = (amount * protocolFeePercentage) / protocolFeeDivider; // Calculate protocol fee
         uint256 totalDeduction = bridgeFee + protocolFee;
         require(amount > totalDeduction, "Insufficient amount after fees");
 
@@ -79,13 +82,18 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
     }
 
     // Update the protocol fee percentage
-    function updateProtocolFeePercentage(uint256 _protocolFeePercentage) external onlyOwner {
+    function updateProtocolFeePercentage(uint256 _protocolFeePercentage) public onlyOwner {
         protocolFeePercentage = _protocolFeePercentage;
     }
 
     // Update the contract blockchainIndex
     function updateContractBlockchainIndex(uint256 _contractBlockchainIndex) public onlyOwner {
         contractBlockchainIndex = _contractBlockchainIndex;
+    }
+
+    // Update the protocolFee divider
+    function updateProtocolFeeDivider(uint256 _protocolFeeDivider) public onlyOwner {
+        protocolFeeDivider = _protocolFeeDivider;
     }
     
 
