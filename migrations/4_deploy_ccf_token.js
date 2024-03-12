@@ -1,6 +1,6 @@
 const { deployProxy, upgradeProxy } = require('@openzeppelin/truffle-upgrades');
 const CCFToken = artifacts.require('CCFToken');
-const FIRST = true
+const FIRST = false
 
 if(FIRST){
     module.exports = async function (deployer) {

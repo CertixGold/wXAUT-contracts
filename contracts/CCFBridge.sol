@@ -11,6 +11,7 @@ interface IERC20Token {
 }
 
 // Cross-chain Foundation Bridge
+//v1.1 Added tokenWhitelist
 contract CCFBridge is Initializable, OwnableUpgradeable {
     // Mapping to store minimum fees for each blockchain destination by token address
     mapping(uint256 => uint256) public minimumFees; 
@@ -26,6 +27,8 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
     uint256 contractBlockchainIndex;
     //Blockchain which hosts the contract
     uint256 protocolFeeDivider;
+    // Mapping to keep track of whitelisted tokens
+    mapping(address => bool) public tokenWhitelist;
 
     // Event emitted when CCFToken is locked
     event Locked(address token, address indexed user, uint256 amount, uint256 protocolFee, uint256 bridgeFee, uint256 blockchainIndex);
@@ -43,6 +46,7 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
 
     // Lock CCF tokens with specified bridge and protocol fees
     function lock(address _token, uint256 amount, uint256 bridgeFee, uint256 blockchainIndex) external {
+        require(tokenWhitelist[_token], "Token not whitelisted");
         require(blockchainIndex != contractBlockchainIndex, "Choose another blockchain");
         require(bridgeFee >= minimumFees[blockchainIndex], "Bridge fee is too low");
 
@@ -60,6 +64,7 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
 
     // Unlock CCF tokens
     function unlock(address _token, address user, uint256 amount, uint256 blockchainIndex) external onlyOwner {
+        require(tokenWhitelist[_token], "Token not whitelisted");
         require(lockedBalance[_token] >= amount, "Insufficient locked balance");
         require(IERC20Token(_token).transfer(user, amount), "Transfer failed");
         lockedBalance[_token] -= amount;
@@ -109,5 +114,15 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
         require(totalBridgeFees[_token] >= amount, "Insufficient bridgeFee balance");
         require(IERC20Token(_token).transfer(receiver, amount), "Transfer failed");
         totalBridgeFees[_token] -= amount;
+    }
+
+    // Function to add a token to the whitelist
+    function addToWhitelist(address _token) public onlyOwner {
+        tokenWhitelist[_token] = true;
+    }
+
+    // Function to remove a token from the whitelist
+    function removeFromWhitelist(address _token) public onlyOwner {
+        tokenWhitelist[_token] = false;
     }
 }
