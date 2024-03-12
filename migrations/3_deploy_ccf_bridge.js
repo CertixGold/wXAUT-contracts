@@ -1,6 +1,6 @@
-const { deployProxy } = require('@openzeppelin/truffle-upgrades');
+const { deployProxy, upgradeProxy } = require('@openzeppelin/truffle-upgrades');
 const CCFBridge = artifacts.require('CCFBridge');
-const FIRST = flase
+const FIRST = false
 
 if(FIRST){
     module.exports = async function (deployer) {
@@ -10,6 +10,6 @@ if(FIRST){
 }else{
     module.exports = async function (deployer) {
         const existingProxyAddress = '0xaB9C06534cDbd6687CF2baF2DDD2BA06848EE51C';
-        await upgradeProxy(existingProxyAddress, CCFBridge, { deployer });
+        await upgradeProxy(existingProxyAddress, CCFBridge, { deployer, initializer: 'initialize' });
     };
 }

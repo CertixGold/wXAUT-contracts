@@ -1,8 +1,7 @@
+// OpenZeppelin Contracts (last updated v5.0.0) (proxy/utils/Initializable.sol)
+
 pragma solidity ^0.8.20;
 
-
-// SPDX-License-Identifier: MIT
-// OpenZeppelin Contracts (last updated v5.0.0) (proxy/utils/Initializable.sol)
 /**
  * @dev This is a base contract to aid in writing upgradeable contracts, or any kind of contract that will be deployed
  * behind a proxy. Since proxied contracts do not make use of a constructor, it's common to move constructor logic to an
@@ -227,6 +226,16 @@ abstract contract Initializable {
     }
 }
 
+/**
+ * @dev Provides information about the current execution context, including the
+ * sender of the transaction and its data. While these are generally available
+ * via msg.sender and msg.data, they should not be accessed in such a direct
+ * manner, since when dealing with meta-transactions the account sending and
+ * paying for execution may not be the actual sender (as far as an application
+ * is concerned).
+ *
+ * This contract is only required for intermediate, library-like contracts.
+ */
 abstract contract ContextUpgradeable is Initializable {
     function __Context_init() internal onlyInitializing {
     }
@@ -246,7 +255,6 @@ abstract contract ContextUpgradeable is Initializable {
     }
 }
 
-// OpenZeppelin Contracts (last updated v5.0.0) (access/Ownable.sol)
 /**
  * @dev Contract module which provides a basic access control mechanism, where
  * there is an account (an owner) that can be granted exclusive access to
@@ -359,6 +367,7 @@ abstract contract OwnableUpgradeable is Initializable, ContextUpgradeable {
     }
 }
 
+
 // Interface for the XAUT token
 interface IERC20Token {
     function transferFrom(address from, address to, uint256 amount) external returns (bool);
@@ -366,6 +375,7 @@ interface IERC20Token {
 }
 
 // Cross-chain Foundation Bridge
+//v1.1 Added tokenWhitelist
 contract CCFBridge is Initializable, OwnableUpgradeable {
     // Mapping to store minimum fees for each blockchain destination by token address
     mapping(uint256 => uint256) public minimumFees; 
@@ -381,6 +391,8 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
     uint256 contractBlockchainIndex;
     //Blockchain which hosts the contract
     uint256 protocolFeeDivider;
+    // Mapping to keep track of whitelisted tokens
+    mapping(address => bool) public tokenWhitelist;
 
     // Event emitted when CCFToken is locked
     event Locked(address token, address indexed user, uint256 amount, uint256 protocolFee, uint256 bridgeFee, uint256 blockchainIndex);
@@ -398,6 +410,7 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
 
     // Lock CCF tokens with specified bridge and protocol fees
     function lock(address _token, uint256 amount, uint256 bridgeFee, uint256 blockchainIndex) external {
+        require(tokenWhitelist[_token], "Token not whitelisted");
         require(blockchainIndex != contractBlockchainIndex, "Choose another blockchain");
         require(bridgeFee >= minimumFees[blockchainIndex], "Bridge fee is too low");
 
@@ -415,6 +428,7 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
 
     // Unlock CCF tokens
     function unlock(address _token, address user, uint256 amount, uint256 blockchainIndex) external onlyOwner {
+        require(tokenWhitelist[_token], "Token not whitelisted");
         require(lockedBalance[_token] >= amount, "Insufficient locked balance");
         require(IERC20Token(_token).transfer(user, amount), "Transfer failed");
         lockedBalance[_token] -= amount;
@@ -464,5 +478,15 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
         require(totalBridgeFees[_token] >= amount, "Insufficient bridgeFee balance");
         require(IERC20Token(_token).transfer(receiver, amount), "Transfer failed");
         totalBridgeFees[_token] -= amount;
+    }
+
+    // Function to add a token to the whitelist
+    function addToWhitelist(address _token) public onlyOwner {
+        tokenWhitelist[_token] = true;
+    }
+
+    // Function to remove a token from the whitelist
+    function removeFromWhitelist(address _token) public onlyOwner {
+        tokenWhitelist[_token] = false;
     }
 }
