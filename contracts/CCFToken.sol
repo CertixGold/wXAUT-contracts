@@ -17,7 +17,7 @@ contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
     // Total accumulated bridge fees
     uint256 public totalBridgeFees;
     //Blockchain which hosts the contract
-    uint256 public contractBlockchainIndex;
+    uint256 contractBlockchainIndex;
 
     event BridgeEvent(address indexed user, uint256 amount, uint256 protocolFee, uint256 bridgeFee, uint256 blockchainIndex);
 
