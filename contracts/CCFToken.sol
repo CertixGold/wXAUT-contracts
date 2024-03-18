@@ -18,6 +18,8 @@ contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
     uint256 public totalBridgeFees;
     //Blockchain which hosts the contract
     uint256 contractBlockchainIndex;
+    // Blacklist of addresses
+    mapping(address => bool) public blacklist;
 
     event BridgeEvent(address indexed user, uint256 amount, uint256 protocolFee, uint256 bridgeFee, uint256 blockchainIndex);
 
@@ -33,11 +35,13 @@ contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
     }
 
     function mint(address to, uint256 amount) public onlyOwner {
+        require(!blacklist[to], "Address is blacklisted");
         _mint(to, amount);
     }
 
     // Burnt CCF tokens with specified bridge and protocol fees
     function bridge(uint256 amount, uint256 bridgeFee, uint256 blockchainIndex) external {
+        require(!blacklist[_msgSender()], "Address is blacklisted");
         require(blockchainIndex != contractBlockchainIndex, "Choose another blockchain");
         require(amount > 0, "Specify a correct amount.");
         require(bridgeFee >= minimumFees[blockchainIndex], "Bridge fee is too low");
@@ -91,5 +95,21 @@ contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
         require(totalBridgeFees >= amount, "Insufficient bridgeFee balance");
         require(transfer(receiver, amount), "Transfer failed");
         totalBridgeFees -= amount;
+    }
+
+    // Overridden function to check the blacklist
+    function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual override {
+        require(!blacklist[from] && !blacklist[to], "Sender or receiver is blacklisted");
+        super._beforeTokenTransfer(from, to, amount);
+    }
+
+    // Add an address to the blacklist
+    function addToBlacklist(address _address) external onlyOwner {
+        blacklist[_address] = true;
+    }
+
+    // Remove an address from the blacklist
+    function removeFromBlacklist(address _address) external onlyOwner {
+        blacklist[_address] = false;
     }
 }
