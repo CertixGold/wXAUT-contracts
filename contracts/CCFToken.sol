@@ -97,11 +97,18 @@ contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
         totalBridgeFees -= amount;
     }
 
-    // Overridden function to check the blacklist
-    function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual override {
-        require(!blacklist[from] && !blacklist[to], "Sender or receiver is blacklisted");
-        super._beforeTokenTransfer(from, to, amount);
+    // Override transfer function
+    function transfer(address to, uint256 amount) public override returns (bool) {
+        require(!blacklist[_msgSender()] && !blacklist[to], "Sender or recipient is blacklisted");
+        return super.transfer(to, amount);
     }
+
+    // Override transferFrom function
+    function transferFrom(address from, address to, uint256 amount) public override returns (bool) {
+        require(!blacklist[from] && !blacklist[to], "Sender or recipient is blacklisted");
+        return super.transferFrom(from, to, amount);
+    }
+
 
     // Add an address to the blacklist
     function addToBlacklist(address _address) external onlyOwner {

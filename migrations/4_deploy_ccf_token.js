@@ -14,7 +14,7 @@ if(FIRST){
     POLY: 0x5ce4c731a0d59576cE5CE61A222D715c1c8F1307
     */
     module.exports = async function (deployer) {
-        const existingProxyAddress = '0x74Bd32F8258Fd28F2a4c463C1733f1f2e4C69400';
+        const existingProxyAddress = '0x5ce4c731a0d59576cE5CE61A222D715c1c8F1307';
         await upgradeProxy(existingProxyAddress, CCFToken, { deployer, initializer: 'initialize' });
     };
 }

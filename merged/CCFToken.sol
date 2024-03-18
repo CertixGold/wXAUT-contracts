@@ -1,7 +1,6 @@
 pragma solidity ^0.8.20;
 
-// SPDX-License-Identifier: MIT
-// OpenZeppelin Contracts (last updated v5.0.0) (token/ERC20/ERC20.sol)
+
 interface IERC20 {
     /**
      * @dev Emitted when `value` tokens are moved from one account (`from`) to
@@ -325,7 +324,6 @@ interface IERC20Errors {
      */
     error ERC20InvalidSpender(address spender);
 }
-
 
 /**
  * @dev Implementation of the {IERC20} interface.
@@ -858,7 +856,6 @@ abstract contract OwnableUpgradeable is Initializable, ContextUpgradeable {
  * ====
  */
 
-//Cross-Chain Foundation Token
 contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, OwnableUpgradeable {
     // Mapping to store minimum fees for each blockchain
     mapping(uint256 => uint256) public minimumFees;
@@ -870,6 +867,8 @@ contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
     uint256 public totalBridgeFees;
     //Blockchain which hosts the contract
     uint256 contractBlockchainIndex;
+    // Blacklist of addresses
+    mapping(address => bool) public blacklist;
 
     event BridgeEvent(address indexed user, uint256 amount, uint256 protocolFee, uint256 bridgeFee, uint256 blockchainIndex);
 
@@ -885,11 +884,13 @@ contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
     }
 
     function mint(address to, uint256 amount) public onlyOwner {
+        require(!blacklist[to], "Address is blacklisted");
         _mint(to, amount);
     }
 
     // Burnt CCF tokens with specified bridge and protocol fees
     function bridge(uint256 amount, uint256 bridgeFee, uint256 blockchainIndex) external {
+        require(!blacklist[_msgSender()], "Address is blacklisted");
         require(blockchainIndex != contractBlockchainIndex, "Choose another blockchain");
         require(amount > 0, "Specify a correct amount.");
         require(bridgeFee >= minimumFees[blockchainIndex], "Bridge fee is too low");
@@ -943,5 +944,28 @@ contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
         require(totalBridgeFees >= amount, "Insufficient bridgeFee balance");
         require(transfer(receiver, amount), "Transfer failed");
         totalBridgeFees -= amount;
+    }
+
+    // Override transfer function
+    function transfer(address to, uint256 amount) public override returns (bool) {
+        require(!blacklist[_msgSender()] && !blacklist[to], "Sender or recipient is blacklisted");
+        return super.transfer(to, amount);
+    }
+
+    // Override transferFrom function
+    function transferFrom(address from, address to, uint256 amount) public override returns (bool) {
+        require(!blacklist[from] && !blacklist[to], "Sender or recipient is blacklisted");
+        return super.transferFrom(from, to, amount);
+    }
+
+
+    // Add an address to the blacklist
+    function addToBlacklist(address _address) external onlyOwner {
+        blacklist[_address] = true;
+    }
+
+    // Remove an address from the blacklist
+    function removeFromBlacklist(address _address) external onlyOwner {
+        blacklist[_address] = false;
     }
 }
