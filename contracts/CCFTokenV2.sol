@@ -7,7 +7,7 @@ import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 //Cross-Chain Foundation Token
-contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, OwnableUpgradeable {
+contract CCFTokenV2 is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, OwnableUpgradeable {
     // Mapping to store minimum fees for each blockchain
     mapping(uint256 => uint256) public minimumFees;
     // Protocol fee percentage with four decimal places (e.g., 10000 represents 1%)
