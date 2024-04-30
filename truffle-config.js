@@ -43,7 +43,7 @@
  */
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const IS_PROD = true
+const IS_PROD = false
 
 require('dotenv').config({
   path: IS_PROD ? '.env.production' : '.env.development'
@@ -126,9 +126,9 @@ module.exports = {
       timeoutBlocks: 200,
       skipDryRun: true
     },
-    mumbai : {
+    amoy : {
       provider: () => new HDWalletProvider(privateKey, MUMBAI_RPC),
-      network_id: 80001, 
+      network_id: 80002, 
       gas: 5500000, // Limite de gaz
       confirmations: 1,
       timeoutBlocks: 200,

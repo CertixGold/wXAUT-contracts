@@ -1,11 +1,10 @@
 const XAUTToken = artifacts.require("XAUTToken");
 
-const FIRST = false
+const FIRST = true
 
 
 module.exports = function (deployer) {
     if(FIRST){
-        const initialSupply = web3.utils.toWei('100000', 'ether');
-        deployer.deploy(XAUTToken, initialSupply);
+        deployer.deploy(XAUTToken, "100000000000000", "6");
     }
 };

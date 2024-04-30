@@ -12,7 +12,7 @@ interface IERC20Token {
 
 // Cross-chain Foundation Bridge
 //v1.1 Added tokenWhitelist
-contract CCFBridge is Initializable, OwnableUpgradeable {
+contract CCFBridgeV2 is Initializable, OwnableUpgradeable {
     // Mapping to store minimum fees for each blockchain destination by token address
     mapping(uint256 => uint256) public minimumFees; 
     // Protocol fee percentage with four decimal places (e.g., 10000 represents 1%)
@@ -29,6 +29,8 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
     uint256 protocolFeeDivider;
     // Mapping to keep track of whitelisted tokens
     mapping(address => bool) public tokenWhitelist;
+    // Mapping to store minimum fees for each blockchain destination by token address
+    mapping(address => mapping(uint256 => uint256)) public minimumFeesToken; 
 
     // Event emitted when CCFToken is locked
     event Locked(address token, address indexed user, uint256 amount, uint256 protocolFee, uint256 bridgeFee, uint256 blockchainIndex);
@@ -48,7 +50,7 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
     function lock(address _token, uint256 amount, uint256 bridgeFee, uint256 blockchainIndex) external {
         require(tokenWhitelist[_token], "Token not whitelisted");
         require(blockchainIndex != contractBlockchainIndex, "Choose another blockchain");
-        require(bridgeFee >= minimumFees[blockchainIndex], "Bridge fee is too low");
+        require(bridgeFee >= minimumFeesToken[_token][blockchainIndex], "Bridge fee is too low");
 
         uint256 protocolFee = (amount * protocolFeePercentage) / protocolFeeDivider; // Calculate protocol fee
         uint256 totalDeduction = bridgeFee + protocolFee;
@@ -75,6 +77,20 @@ contract CCFBridge is Initializable, OwnableUpgradeable {
     // Update minimum fee for a specific blockchain
     function updateMinimumFee(uint256 blockchainIndex, uint256 fee) public onlyOwner {
         minimumFees[blockchainIndex] = fee;
+    }
+
+    // Update minimum fee for a specific blockchain
+    function updateMinimumFeeToken(address _token, uint256 blockchainIndex, uint256 fee) public onlyOwner {
+        minimumFeesToken[_token][blockchainIndex] = fee;
+    }
+
+    // Update minimum fee for a specific blockchain
+    function updateMinimumFeeTokenBatch(address _token, uint256[] memory blockchainIndexes, uint256[] memory fees) public onlyOwner {
+        require(blockchainIndexes.length == fees.length, "Lengths of arrays do not match");
+
+         for (uint256 i = 0; i < blockchainIndexes.length; i++) {
+            updateMinimumFeeToken(_token, blockchainIndexes[i], fees[i]);
+        }
     }
 
     // Update minimum fees by batch

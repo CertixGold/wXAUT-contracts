@@ -1,69 +1,740 @@
 {
   "manifestVersion": "3.2",
   "admin": {
-    "address": "0x4417E577B2B9bd97dC0DFa422a8814511Da5b524",
-    "txHash": "0x579bfecf6feb52dc0fdf582d5163e423a46d56470e7f062d0f5cbbb88b3ef24e"
+    "address": "0x2b059E281f57A6dF8Df2617FF58E41254f3749a7",
+    "txHash": "0xf0dcfd9f9590495aea28fcb17c1f1b2490fd40643d93c1cb22174307cbc088d1"
   },
   "proxies": [
     {
       "address": "0xaB9C06534cDbd6687CF2baF2DDD2BA06848EE51C",
-      "txHash": "0xea3b61edd0fdb72539ed74afba2e002b1761140aefd807bcd0ea9c159a7dfb49",
       "kind": "transparent"
     },
     {
-      "address": "0x6405dd4DAe0cf5dcaAB2764f339F84444d2Cba82",
-      "txHash": "0xbaaefdc906bfb8d13b5539de1a5df2edffe5e0e23248984bfd59dde566881e15",
+      "address": "0xAF8Ab53c183d3F478450E40d525C1635db0318c8",
+      "txHash": "0x46b2e2d74f6333c145889d91355ba78766e95683c33e4f224c60d1f0af9c5078",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x87f309F8d1d919030EFFD7Ca627525bcb79b9280",
+      "txHash": "0x7a5b421da6abe9498acc108446fd8c1f219c7880bb7cb5941e426540ce52adff",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x12779999CeA8B4ebA48cFb41C606c93349bC30Eb",
+      "txHash": "0xdfb446aebb6e8b601a5df408a364931b2006b4ed0b252feebd723886fcf77487",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xDA032332C9DB9eb8871e9Da880f325FDE8606B29",
+      "txHash": "0x4e1b97840cc56587e639d74fb7bf442f07f7f3e3ca24e403d5ad0e73f277fb36",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x75b41EcD4562e96EE35E36406825A1d88CFFE4ea",
+      "txHash": "0x46b56347883c9cf3296d13ff5531160cfa89c171d28750c6ea6a54359f8392c5",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x9C5cc1849f5D7dea0dDC5098D33B7FA45994772e",
+      "txHash": "0x08f1402af9261ffc3868cfdaf2bea27baa2573b9fb6794c2017e93c29c56c852",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x7FFD7ae857B8857E4f0E24699667A0e97e082DAD",
+      "txHash": "0xbf721aa6c683c9e03c223fe4606829b6870ba18b3c00a644df466f22367d4f46",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xf2E352EcBd2B8e0Bb83d4F0Da821c50AEC317BCC",
+      "txHash": "0x8af67bd1d7cb39461c28b4a6c6c08c1b1643109fed1fb40bc804fd60e95f3b6a",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x401ceF8a8D62EdA4d4c5f0ca9A0d58B9c1dB51C7",
+      "txHash": "0x8ba0af1f99e02948de10273c63b7dc62c10b1a7e2b9087010d198184bff354e4",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x512Ef310d9C408cE415178ae46E5169C7f56c895",
+      "txHash": "0xe2a59fc134c2778d83c581cdf8b59c32e90f884f2111a1585517b5b418af675f",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x41D98378c0d8b88f81dde6df3A041b5001761721",
+      "txHash": "0xb96aa7036998c6bcfd760809309532e10635b20deef1581a1f25f8bc540c3c14",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x7C40B6f6E9375478063551F1642EccA75d454470",
+      "txHash": "0x4b9a80dc33eba1cef7024e91821e0f3e6ef88148c44a35b88a78502b8604ce57",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x7e9fcCcc8e8f3794DF87E40F9f949F2f254CcCDB",
+      "txHash": "0x0ed136925a9acbf68bc2bf0e4952777c9ccf97f0105f9e6fcb04ef640f8a56c2",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xA118a1D51082116b9c959bC54F918d09bc1ff5ff",
+      "txHash": "0xe8aed2ec43334385e0d5228c4ad1a3ead03d083f25085209b61f17d23c1a4719",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x8e53AE401E75a93cc262840F70C2129669c49Bd8",
+      "txHash": "0x3d640e08c815f597b3b35c3886a13b42c0e597a26284783f2ac41bb669023ca7",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x2F615a1E60cfEB9D031d06879e496bF149FDc61A",
+      "txHash": "0x0f3645c28110e76e759f21a317592cbf23950459819823188ebfaf56048bda05",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x8Cb4F4F44D7918048DFc020B6ddF0a00A5a55ab2",
+      "txHash": "0x600ae0a71874572ec0cd34b0668159dfe712f16f0c1c9373587212cb54818012",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x22A98C28AE1dcD18F9FB736fFA4A8529D46E4b28",
+      "txHash": "0x68f8a56909b50136b506913127f5ee1cc11c2d1df11adb4817bf58f722fa5afb",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xB2929C5a4eD9E2d46f24d7c5DC726003F4615B40",
+      "txHash": "0xc6cdb11dcec1a3e5da4b541bcf30f5fbe1c0f4c5673571f20604117d63a39937",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x3aD4139355c9631D3ABe51BC4707b68c3d78235C",
+      "txHash": "0x149dc86856269939fc8bf918e4a9b3e538f494e9a1d8447ada11e8a0bc72d202",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x4CD1940b0150082aD3b9cB1c5B031C29B1F6fCDF",
+      "txHash": "0x90481b70ae4d9fbcdeb1aa78c92d2d2fb35563d18c9d9197055a54f0a58ca1bd",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x6c65a27Be4E987065a975be378890404597112F2",
+      "txHash": "0x4b1526fec177d6ff0764fed6dfc8e80ca20965b16d2f7035c26d3058eb2cbd95",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x804c95B77d3B405aE98F2Dd51718FCeF9723175b",
+      "txHash": "0x0d22f2766bfd1ee85d0c6bb26c637653779363ef2c98206082188dc4967a6438",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xe1E0e9c8F2429b93eBF807Cf243726C82260Ed2C",
+      "txHash": "0xa78ec8e92f86768ec8a005f6b3e04bed87d01e6e7a0c6d33e8f89c12fe2c01e1",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xE1F04c3376B156566E17d6150d98c0160e8aFF61",
+      "txHash": "0xd29b135443fb2522a549ab79fcd41dcc5cb6022afe95245c7b3177c85dd1918f",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x28C04e1ef9bdA57f59E561458Edf91ae87B7Cec3",
+      "txHash": "0xcaaf97b67c985b5871be0d06ae6086deb2117ef8065f5444c733199dd9212453",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xBB39a18B2a392FDCC4851dbC301aC5aF85C34EE5",
+      "txHash": "0xab7f639c0b39f6fe76516a8b0f05c3b2888189723d4d9cb24f889ef6827fddfd",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x7ed18f32b84d1024791bFCd288bA1628fff398A7",
+      "txHash": "0xe9cb5cd8bb8b05664cdb685cfddd1c292e354ffd9743d87b3c7d0197e496ff9f",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x8152AE8b61A46E79ddF4a0C3f581cceF2ea542d0",
+      "txHash": "0x5db1e2e486e0a87aa25f1e27c1c31bc34553c24e0351296591d46421bd0bf336",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x2f7C84D57dfA1748bB17Eb0e6925f8b1AA0B6f50",
+      "txHash": "0x1eeb94f7b27fe31cd80bb39ca816ec8da23420307db9da9d51caa1856d8b2786",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x3bF04b422Af7c0ADc2069D63899F325172fd4C0D",
+      "txHash": "0x15d0f5bff9d36809c6b47d4dbe25d6b57688c8ba23ca6901090fe00266618689",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x74372A4a7784195F2212C33922f6A904C7897581",
+      "txHash": "0x2fd87b32ded6b46beee2db3bdfbabe8e8f117332dd1f60aacdd5214f8a847777",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x6E7a497457beA9E9864a446A85703440D3C47D62",
+      "txHash": "0x1488e5cbe315f0d92fbd8772f7b550bd25e51ba7280d7ac7b8de8a6c4c827c68",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x02AEe3f2bA26B1C9040A29DdB629852CFc7Dc733",
+      "txHash": "0x8c2c4254dc5376204d9541a1f0c1d9b54abf97d2a48fb80caa31ecf332d07e62",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x9255D48F72c1F86E8553a5d28b9E7855Dcb846A7",
+      "txHash": "0xed64d6301cc04845e27429078bf80ce6e2addf37307049365862ce2e7d968f47",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xe72f7dbC4621eEF0Dbfa766c15dB73f0cfbf2783",
+      "txHash": "0x4eb4baeffc1929cc7bbf6736b5507fede00fb1b1f6af5fb581c1107ed9d82f6a",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xF42648c17FA5f8844Bb62C5cE43565746340CF34",
+      "txHash": "0x3e6ceef28d3f71ddaba57bb73b810d2893b63a3881aaee6722467c6e50285fca",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x05bdd087FCD00a946F6b87d4e3E3f8F812bc518d",
+      "txHash": "0x463315c99455d70cdd6903cfb4805a27f9b620cfd63aee5203f6e869daeff72b",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xbF11650e2Ed6E722f0bb1e58fc27EB5a605B581d",
+      "txHash": "0x2b22aadad9eee0f2e06d9e744125868eb15c6bb21b88da0e8c37314208bbc2e0",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x00510B482F06c1fC31CC2F4bF06187E7E9f375b2",
+      "txHash": "0x82d86fc7f3ecb0d4ed96abadf3001fe6a3eb1082fe346a5d270ff47a0b72e905",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x6b578b56f2174F3c0d279923Dc43E5a0214c9C14",
+      "txHash": "0x575773dc66870e191a639d9cafaefda1473459c2063da278aa2e67bcf88ccc08",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xda69f0F106db2F416F19846624e7Ee186C2d23b8",
+      "txHash": "0x47feb9decc6e9274a529d7f2edbcb5b0d76f4e0627cdea67a5b4f26a5db2c3ef",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xb466eb57fA45B8f25d5287d1A5ccCf632364868A",
+      "txHash": "0x5de411193a3805094b05eb5fddd9e0feab6988c05c37995fc7f86e76f2ae1ae5",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xd996568E3d90Af704e371B937392B41A36e8aa8e",
+      "txHash": "0xe98cf7005309db3367c5572e75a567b12cba66bca936917c07faaea01512703c",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x613b551ae54f09eFA93B9F731583343B8b54E4e4",
+      "txHash": "0xef1b615aaa9b7a86352dea785bb5b2b223b65b4c5de8af9a7c3457f1139578d2",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x09F1f59C1A549aBab8583F1eF7Ce8117B511a215",
+      "txHash": "0x39a8c88fb865dc2368dbe8b0258c1491ab75711f95d7225eec4ffde729b22b6c",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x9b79B132d11997aBd3A7929823767Bb4eF8bA38F",
+      "txHash": "0xb52d2556766a9a488af6927922c7b69016e81c0040d1e8a9946379281ca04e6a",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xB41858623BDef07e20dFE9040670693067267B52",
+      "txHash": "0x057d4c8046dce22255b7c086fdd2510b27dfe26829a996f7d96e73a7636a32a7",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xbe3B15B141C28730a50485D2a5dce80a9Fcdc57E",
+      "txHash": "0x22ddcb842eb92469bd51b45c4b6ca7d38397fedde73c7812802e351ad0292b8a",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x83605609045c39E49d623d0134B109Af59847B89",
+      "txHash": "0xc5d1cfb1d323445c5b54a92e3a02e8655428e985bf3bf154f99d713b8842776d",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xAcb86014134ca2FCf598828413707F799C545476",
+      "txHash": "0x913b608ef17ea863674b909bee418c4eea12406a3040336559d02bc6d66851fa",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x5c928bbC98B53ee843D77C8AdE197eeEB049CC30",
+      "txHash": "0x60319602d83d12b024dc8b99c4ab0085b4216bbf1fb1902ada549795ec1c8518",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x96ea60Aa1B2818cB70f54b2f70577Aa65eF8F064",
+      "txHash": "0xec388fbc8c1043375266ed34ffd0c337ef080223ba3e5bd14c1356640ea9b446",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x8D3fA7F1b340a62d2E5E677703a48B9C9EFc6212",
+      "txHash": "0x06cf33df8cd95485ad95210bd045c3482c58f9001eb891ddd00d2f9fd4858c64",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xD84F48B36ca4f36B2E31c6BFdBc34eE23a6B54Ea",
+      "txHash": "0xac0b0d001ef9f46c6ccdd7ef67bd63faa8b6badb743e348e96e6932f32589a35",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x4F5ee3f657789DC773fdb5d583A638622a02421B",
+      "txHash": "0x1c47935d932ca9c04a685bdb487af5b9b03b324f7c42a5138050c5fc454c13b1",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xDda79641832a1A7290E5363d5E70Cc3c67735ddf",
+      "txHash": "0xca1e1b2031511f247f8c19fad7db3cf0b4c5fa740349ee6858af36080ca23bbc",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x725d43069aDA9584876252E79475A31D2aEdaa16",
+      "txHash": "0xba94c7ebfb611155592833543489d82236b07fd3619a8077e757c97bab9f2b27",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x107874d8Fe3Aa16E95bB93D6d77f0a1A8377A7cF",
+      "txHash": "0xaf12126e2263730394be776bb742ae7789955feb9110c904fcf930a93a896724",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xc9B596A73d64260B740f1F5Be940daCeAB8F0569",
+      "txHash": "0x8e19fe0b625fb4ce2259d6f6b94fc8209a7f3c1d1fcfadb5e78759e039857fd0",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xF786bfCFdFbE92209eBcAcb9c538D0E46B97cdE8",
+      "txHash": "0x55ee6da54392b52867d9647762b438b0def98a637dea7512c57ed2a4e3c94722",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xD4779773e9AE1CB4d329df1846Bbb96388AA4268",
+      "txHash": "0x4a0afcfbe4118e32b1d219ce5ade5304cbe4ac1e6a838e2ccd1e0267ac144491",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xBa511E15cAa449d4c2ac76A50e98252f4Ce9CD49",
+      "txHash": "0xeef0854a1057d9c31ac3b5a35fe280f703666d98049f00d62e91bd51fe2004f9",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x6BcB5520a24DF7820cAd07feFc9DeA7d7e72B5Ed",
+      "txHash": "0x6eb3d4796de55929f0e6d89efa4aae8380a0e5e444c6553f755960d77f33fb76",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x7a21b7cC27685579b71A72B2C45fc677982dd127",
+      "txHash": "0x916b3f5ac7ca243837e23b65a5885183c0f9a9b086c419337e7de9dec7bffe55",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xdcA9BaE2920FCC01dEBE3c1980C50dd8806F2d12",
+      "txHash": "0xc78e5b76f64136274c6976ffaf3bf74eb46d4ed4243f9bac9a057f7772d2932f",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xF2F59b1a85bF26Fd7d625e95E0DFf8E8840F4dd2",
+      "txHash": "0x7be004c018e10fdb734bf691009de3ea1f8cd21ce27c9039f477323edc5dd4bc",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xFE86D76a737aF0477b44d0C9A4D02BE688c13685",
+      "txHash": "0x97d5f4769cbadcb0e579ea49447e387263e3f4604e25979a9548db32f4142356",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x3DC384C4c4BaA08E975ED562a9921501FaA89Ec9",
+      "txHash": "0x297c0609413ad860efaea242bde6bba614bfbf6762da2a204da1da5ca48c2040",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xd8C9B2Cf3A98e4F7E07763939D15505B725C35Cb",
+      "txHash": "0x3b65245405218613ce0d811da6a73eb9e3d908bd59093077c39219ae69d13825",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xc035dD607cF40f0DA169DBF298f50aaaB5Ee39aC",
+      "txHash": "0xcb175a79a443427b909f8018c3a6a470df360a3c6b1cf14d90a8d96d269dd6dc",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xDdCA848138E039D6dd6055792712ea26873055C6",
+      "txHash": "0xc658ebe951be4fc9e53386042d2dce4ba877aab00ea5fce942a3d955e74b729a",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x3D057448364D18F6dA143Fe291a80076946909Fc",
+      "txHash": "0x5c378754c15f080c1b06080e4f121e8688dd2fd9817bc468fcd499e00478c889",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xf577b5E4e696E6fD169D2bd99E0429b4b6327475",
+      "txHash": "0xd9d86867fcf9d31cd41ca3a98d0f7aef2f6b367cb99504ec3e284dfe9e2c0bc7",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x8ee0bC9eA6D40b8035eEF76EfBA010a98A78867A",
+      "txHash": "0xc0d9373cc13ad96654115a0f2a082ead0d2d544c6777644bedfa563ed434368e",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xe6f6055283833CE3cdb7099386038c94aa723D47",
+      "txHash": "0x600214bd22710a2fd4835aa96daead6832a01eaa88e7f25ff7a45017471dc9f4",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x3170b1FcbFaB7d2e336F5426caD343C6e482D0c8",
+      "txHash": "0x5357efb1689e2e241b6c88c97eee2ede496268a813d677a6ac3ed2abae46a11b",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x0d744a8523EDF6e2f6D5ee049C7Ae9E4B5580DFd",
+      "txHash": "0xd5195e1e5d3c6013a64a7def0c708be2567aa2e5f4aa55ccbb637a91f5bf5039",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x04550D309ad29455697c04294fe7B43d96829c94",
+      "txHash": "0xe5cad2ee9a3a9488cb898bb4ba0324ec2e7dcb6d4f42e1bd31797c49b01e6433",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x1cf5C8Ac2dff8406b12625727333620645d878Bf",
+      "txHash": "0x667e0fc7f71dd9503626b47edeba6ea00ce1734816f13013f7b22f19fbcf9f84",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xD33a2A9810f44a3932924C957ff12bbf9f102314",
+      "txHash": "0x82761fe32896424d4f4714e65ab76655882cd82ae5a22414780bc30e26dc3e80",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x4634fa122B0AC3e72Aec5F4819aa0A8A7D81AD2F",
+      "txHash": "0xf95f8732180d6b39d6a55c59629e694768bca2bb811a19ebe391c6ec7941b620",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xeFba63c3f76D654477b38543a0E7Dc2da4d2A394",
+      "txHash": "0x3a629c580fd2bdb6280cc725de380304bc0effecd905ff659fea90fc88e5138f",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xDA9C095ACda8dc3B6Ba197FA0e9084547C556e12",
+      "txHash": "0x6a72256753ae62fc4f18562498a59c2e4096bd95c522f25c08dcb823c9d171f6",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x22D90FB3bd15B9Ef86ac1ec6acF15b13f2a430C8",
+      "txHash": "0xcc9dfee9987e6ad254b19e2e383599bdea5d7b1460edc1344d8085f6e5b90df7",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xfBfD0FD8228dEd0aA16d25537Fe571C28679B8b9",
+      "txHash": "0x90c8f0404e25681b8e5841849e98ff972c80cc0f0702a61e69634468dffa739f",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x3892eF47B519c977532777246d3BB7a67eBb1F9e",
+      "txHash": "0x64cda5d2b7782ee60b8a7f36701b2ea39d7f9a4c116394ab22dcb35fb0028d54",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xDA6572d6DfaA19f4e48fd35f5CAF091433EeECEd",
+      "txHash": "0x1902b08c25772bc8d067c5295317c9c57b95cb447a59b29613ba106f3eeac3fb",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xDBE8Bf5e54Db06684E9D73bE2A44550A2aD0C81e",
+      "txHash": "0x229eadb05a529f91314633ca5827818b735945605472a5345a643ceae5fdda77",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xF8d38D7B353836A4Fd0bbB792800B388e3251a4C",
+      "txHash": "0xf3a9c217c10ea3b555aff2130e0377972f56ce60c95bb7c87725e6f99504a108",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x7a12c1e42268Fb5A357955d5Ed02943F8e697440",
+      "txHash": "0x3f27bf008c18ae3bc8e7e90a31512c4012486fea910b7b62e3705e688b3e84e9",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xb6A85c6AeE97c89585DB9Fc13b09c74fd03EE57D",
+      "txHash": "0x89e6c8bcc75799f1100b39fcf23f69c8d1410a92cfed24d7320501c2f2987270",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xAdE6b2f7Eb27F9bA65FFD47CA3a6f3C48b13E152",
+      "txHash": "0x52df6c9a35311a9a62b137bd6ceae41eae21aba71bcb8341c9cf1842aedb7637",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xd725651284cb7aB04FF229b46fAF0E55F8f1bFF5",
+      "txHash": "0x419d8f8b4dc474ee9cefa7b0e671a3bbfe955014867e16472e50bec693aca44a",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xDa48E2c02bdB6f4915368156a46ca422E5818D33",
+      "txHash": "0x9ed60fae3c4f5e58ba2d11264005fbb674cb75f115c0885e1ef05c31097a7764",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xDFa51Cf294E19AC557E509A6bD832899C8C0Cc85",
+      "txHash": "0xde3bdf3c56dc388b7c7b7c277a4df5ea195bd03510af9f75e6a32ba58622233f",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x0d656F63c7e146b70cFfDF557DACBb636C81da6B",
+      "txHash": "0xc1fe1b588c71787703da118b0eb078ed0faabe6b3611100755828a61f5ad499a",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x259E980b25E60abE45493863b19dD1D65155879e",
+      "txHash": "0xdcd8582eb01f88393956194d3d584778ca880da7055f207fce53069afca8068c",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x414f46FCb69968239B58C2B7a0A5b1F2bA2e751C",
+      "txHash": "0x0885d87ae7f1093cc07944920391e9b9eced8d6330929519010053ca0926f11b",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x7BecF7094994a651CFd332593887558DAda15bCb",
+      "txHash": "0xc67be63708e2387067d5c4012459379ad3bd4640fd6dbb7ba2e0937b34963a2c",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xeEbF27619f029F5f311992488246B61e717661d7",
+      "txHash": "0x4740d2a0ca5dc58e4284914dcd3c67797daf6985717aefe96840eccea90ec2b8",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x1E90Ea69c3F8F5C9b2736d7bb75C8cb625CE50ED",
+      "txHash": "0x9f5da95d7352237dd9396807e40246a2c9e8a2d9fe85c9a241e922abc4902d68",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x952Cf715e097b9ABBa9e62C13A0ACb6A10c10E12",
+      "txHash": "0xac74378690be538a7a23257aace497d6404ab96c7161b89e317f990358d489d2",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x5292a9eBF4ec72c5Ef829b72B59324e938748c8B",
+      "txHash": "0x8a1d47488584d1c083fc92c823bd85d0e6a47f3efd3bd57f7408a2fe10b945ab",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xB0dCF006013c3a573B6F713Efc3f132a328EB815",
+      "txHash": "0x190a7a2e636d8c91c101d1870c90afeeb895ec9f54e5642af957a30186f5281b",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xac77f5280524f6D8284724D3593a07E3c067F9A6",
+      "txHash": "0x5677a159e17e1dc52ee297b6ad54b006b180ac3c57b8afc595e5fc4ff827c742",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xe8cc68e8C4F0389Ec4561665529a87408151E3A3",
+      "txHash": "0x90401cdaea2e5dfc243f067238b81b97470ccc09c01a27f7aa6e4a19e6b5ec97",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x4bEc7963a44dEaC6A94F7e645bCf1C9E9846bB56",
+      "txHash": "0x536f9ad363817a75802ac7ff402c5bc06c8c322add66e69874bb0872d1df60da",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xDdd5Fac8dfC25C08eE3C18Fc64dA6E50e803667b",
+      "txHash": "0xbb5aab531b7fe1688c48b737678f53fedf33ad158000b1ce396c0e26639f853e",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x9e1F2C09Cf98973Aa589D73DD65871D7E95b175c",
+      "txHash": "0xa666930a8cd6a79aa7dd2f2b8bb0241c43a42228af26c4bf6314334b5fda31b8",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x3Dcc5395C742FF61F78d1b4d1188734DAF984FD4",
+      "txHash": "0x05ea08ad845577e59ad138923b5de1aeefc8942c453a2be3b1ca5065502f2528",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x06b55D0E4C0a2D6B4f83b7de9Dea92bFc9bd3DEd",
+      "txHash": "0xb41be87a792572e64ae6ee714b2e57b975b6f1144ca70bdd510c394d4b380622",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x445C5C3f804112491ec1aefe87D09b01dab73b09",
+      "txHash": "0xe87661aacaf51d0ae5e462d56f3f54fea17168d61ce1c54eb293573a8b08cbec",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xCd19197BA5179A02d93a937089F8Eab737236753",
+      "txHash": "0x10c1eeb14eec8074c530536fda9ef3924ab33e6a6000c965a989e52e17bb6517",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x17Aa976Fb8ac5A473CC61d30298FfdaBb61D6f1f",
+      "txHash": "0xa99ac7645b5ba74790154a1922ec87275d80f5f961a9347d46a819f531974359",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xbc064e81f1f9057809b461526bBbA4353F26234c",
+      "txHash": "0x38c067bf206138d43a6da8830df6da24b8dea774449928ad3ac93c9fb302b263",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xc4FDACDBDF71D8EF6Bc99244D007d99aCF703067",
+      "txHash": "0x12176b7a01319ec68fefb0e0cc2e8424464245300ceb5d85ea93a5298f97b45d",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xb5f46c2C7D65DEC167C5fc1937Cc1B63a0855306",
+      "txHash": "0xde31507bfcb483a2174c326e8c4dc185d14452946ec1ae1c07f7af306d65fc45",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x0b607af1a13f2c1A6E7BF0F80c44094Edfc076AA",
+      "txHash": "0xea5478c816410e7eb21b76b45e29481b86ebab2202cd8473ab0539d7512003cd",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xc9dD35AF306D10bd159D33D9fA70360d67eaEddb",
+      "txHash": "0x5b4e67378c051299e819c13a3effab59ed33400cbc9b108baecd459363934ee8",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xb6087aF5A88b66BD26df2dA7e522883Bc35d822a",
+      "txHash": "0xaff29d023bad2a559f6f107ea561cf1e10036e92ab4a77acee5aeaf8e86a7a5d",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x47A87e5E4F288605163aD744815955cB94E1667c",
+      "txHash": "0x45dbfcd39ee4ca509a1b7066eb6c0250b436d3f55bce01f6fd46ede74e268370",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x307cC435ccd7734fF71a58743239CE4F03efF0dd",
+      "txHash": "0x8d7536895140101d9149438f1d0827e342af670d9e37790246430e5f1c755728",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xb41708A47b7061ADDbf50c6408D82759cC1C2903",
+      "txHash": "0xf135634c9200d1246d04bed7d974e5637660429f205eb5bc05be49394158fcde",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x11e85DcF27a25A5a2cb0e3D80749832FDd7765BD",
+      "txHash": "0xfd25ecf11b9e49a4d4ee09cdc61be6c20ec386ec564cd33e73e766b980134131",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xFbBA709faf31a5F34166cf8C5e504b8F16AE6aB0",
+      "txHash": "0x6776dda2e8b96f73edeaa9bd5c6ed6c50fefd4101cd4bd2b0efa9dcd538c7273",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x5B7d27489cfD3A97fcCaB7b2Dc208847139891d7",
+      "txHash": "0x8e75564ace67cf6cf8fd3dedb04cf43ce8ed6a886a8ffafc6c52b67d1f55ee27",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x56bB376167335BF09f689e2120a3f78b8F9fa72F",
+      "txHash": "0x6e9670bd6483a6d24bd017f918805a9b212233d5ef0f5de61bb5cf3e4e0cb60e",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xe2618e9d47C01203825a8aC30FCe9b1c4FcCdDeb",
+      "txHash": "0x3cceb99269694a1c911529fe18a9a620564639b4dd0148c91d35cd026ef903aa",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xE52B0B2278054A8B5778e32896eCF7Df3EB0D35A",
+      "txHash": "0x6b9b0358d9db1a2709da1640e50b23bfc37fd01dfdb92613b40b74e7b7de961a",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x951d8155C0B76751C7BD9c1D7CB0675a587aa08B",
+      "txHash": "0x6b0d55b750e5dde4252206d5d2994e7f1473e06dab45f26296f73f9a41a0d68a",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xAeA1344c03C311196b1b3F0A978aA9285af66f3A",
+      "txHash": "0x958c703370ee089d21a44276286310af650084dc4d1015b68b2e7805fe400be8",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x9751a2B12B4aF7CE80670726eD9c1bd223bEF294",
+      "txHash": "0x657243514c0bf174e0617429a082d9854105d786929e55f8119c08835fc6c134",
       "kind": "transparent"
     }
   ],
   "impls": {
-    "38df1148ec3cddbfe52a1124e8e6f0278b042710c8d9860d893bce69c7f960da": {
-      "address": "0xfFB1F7566cC861Ae5942fff69285CCfaA1B17f7e",
-      "txHash": "0xce175f80174884ea0574fad072bb943d505981ce0e4c77176f7c6dc38fb959ab",
+    "8b4698a48a5ec603218e836d8a430705a7888d0f18261a2719b76774d5a28880": {
+      "address": "0x93B62806cF61De4876d2dD77066E0CC170331806",
+      "txHash": "0xdd8215e8f620e75de13f55fef793544f574b1c82ec8abe3bbf8c808a4d092884",
       "layout": {
         "solcVersion": "0.8.20",
         "storage": [
           {
-            "contract": "CCFBridge",
+            "contract": "CCFBridgeV2",
             "label": "minimumFees",
             "type": "t_mapping(t_uint256,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:16"
+            "src": "../project:/contracts/CCFBridgeV2.sol:17"
           },
           {
-            "contract": "CCFBridge",
+            "contract": "CCFBridgeV2",
             "label": "protocolFeePercentage",
             "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridge.sol:18"
+            "src": "../project:/contracts/CCFBridgeV2.sol:19"
           },
           {
-            "contract": "CCFBridge",
+            "contract": "CCFBridgeV2",
             "label": "totalProtocolFees",
             "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:20"
+            "src": "../project:/contracts/CCFBridgeV2.sol:21"
           },
           {
-            "contract": "CCFBridge",
+            "contract": "CCFBridgeV2",
             "label": "totalBridgeFees",
             "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:22"
+            "src": "../project:/contracts/CCFBridgeV2.sol:23"
           },
           {
-            "contract": "CCFBridge",
+            "contract": "CCFBridgeV2",
             "label": "lockedBalance",
             "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:24"
+            "src": "../project:/contracts/CCFBridgeV2.sol:25"
           },
           {
-            "contract": "CCFBridge",
+            "contract": "CCFBridgeV2",
             "label": "contractBlockchainIndex",
             "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridge.sol:26"
+            "src": "../project:/contracts/CCFBridgeV2.sol:27"
           },
           {
-            "contract": "CCFBridge",
+            "contract": "CCFBridgeV2",
             "label": "protocolFeeDivider",
             "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridge.sol:28"
+            "src": "../project:/contracts/CCFBridgeV2.sol:29"
+          },
+          {
+            "contract": "CCFBridgeV2",
+            "label": "tokenWhitelist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFBridgeV2.sol:31"
+          },
+          {
+            "contract": "CCFBridgeV2",
+            "label": "minimumFeesToken",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
+            "src": "../project:/contracts/CCFBridgeV2.sol:33"
           }
         ],
         "types": {
@@ -79,11 +750,17 @@
           "t_address": {
             "label": "address"
           },
-          "t_uint64": {
-            "label": "uint64"
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
           },
           "t_bool": {
             "label": "bool"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
+            "label": "mapping(address => mapping(uint256 => uint256))"
+          },
+          "t_uint64": {
+            "label": "uint64"
           }
         },
         "namespaces": {
@@ -112,9 +789,9 @@
         }
       }
     },
-    "1edc368f1545df64f4c3d9647ade4ed6eec089e9947add92d948a88f362d46e4": {
-      "address": "0x74Bd32F8258Fd28F2a4c463C1733f1f2e4C69400",
-      "txHash": "0xb679e9df07deb8f0876958a1abb810f7a6e1c519fd324c0ffa6004601a979585",
+    "c462669be229baed87b6d53c50175537f64a20baa278310f595537bc30718255": {
+      "address": "0x0518FE9c65b53590B3aBF406cD7AcEa5E4164188",
+      "txHash": "0x6f28140d6f869372aef963721e87fad7836a7d7d64a217a88b541ce9ad8dba4d",
       "layout": {
         "solcVersion": "0.8.20",
         "storage": [
@@ -147,6 +824,12 @@
             "label": "contractBlockchainIndex",
             "type": "t_uint256",
             "src": "../project:/contracts/CCFToken.sol:20"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "blacklist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFToken.sol:22"
           }
         ],
         "types": {
@@ -156,8 +839,14 @@
           "t_uint256": {
             "label": "uint256"
           },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
           "t_address": {
             "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
           },
           "t_mapping(t_address,t_uint256)": {
             "label": "mapping(address => uint256)"
@@ -170,9 +859,6 @@
           },
           "t_uint64": {
             "label": "uint64"
-          },
-          "t_bool": {
-            "label": "bool"
           }
         },
         "namespaces": {
@@ -233,59 +919,53 @@
         }
       }
     },
-    "dc81b4844fe468201faa88abfa5a514f8f39e3544325ed5549ca50ab6639554b": {
-      "address": "0xf674dBb3A226Bb1bAa6E84f45cEDab7A0e4c8D74",
-      "txHash": "0xd2109e95b133e04f346845a0eac1dbd711e84f0b8b942533ada72be92131844d",
+    "b7b03cac1524a795e3c84c06f02c8728737b9531c065da6a92290cb0f627a70c": {
+      "address": "0x65134c22d69F8fC79c4D1F33d025bFE2e20e95f6",
+      "txHash": "0x164bebeff1370e13590e59c47829bb3778fded717ae63b821b40144191380f2a",
       "layout": {
         "solcVersion": "0.8.20",
         "storage": [
           {
-            "contract": "CCFBridge",
+            "contract": "CCFToken2",
             "label": "minimumFees",
             "type": "t_mapping(t_uint256,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:17"
+            "src": "../project:/contracts/CCFToken2.sol:12"
           },
           {
-            "contract": "CCFBridge",
+            "contract": "CCFToken2",
             "label": "protocolFeePercentage",
             "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridge.sol:19"
+            "src": "../project:/contracts/CCFToken2.sol:14"
           },
           {
-            "contract": "CCFBridge",
+            "contract": "CCFToken2",
             "label": "totalProtocolFees",
-            "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:21"
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken2.sol:16"
           },
           {
-            "contract": "CCFBridge",
+            "contract": "CCFToken2",
             "label": "totalBridgeFees",
-            "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:23"
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken2.sol:18"
           },
           {
-            "contract": "CCFBridge",
-            "label": "lockedBalance",
-            "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:25"
-          },
-          {
-            "contract": "CCFBridge",
+            "contract": "CCFToken2",
             "label": "contractBlockchainIndex",
             "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridge.sol:27"
+            "src": "../project:/contracts/CCFToken2.sol:20"
           },
           {
-            "contract": "CCFBridge",
-            "label": "protocolFeeDivider",
-            "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridge.sol:29"
-          },
-          {
-            "contract": "CCFBridge",
-            "label": "tokenWhitelist",
+            "contract": "CCFToken2",
+            "label": "blacklist",
             "type": "t_mapping(t_address,t_bool)",
-            "src": "../project:/contracts/CCFBridge.sol:31"
+            "src": "../project:/contracts/CCFToken2.sol:22"
+          },
+          {
+            "contract": "CCFToken2",
+            "label": "decimalsNumber",
+            "type": "t_uint8",
+            "src": "../project:/contracts/CCFToken2.sol:23"
           }
         ],
         "types": {
@@ -295,17 +975,26 @@
           "t_uint256": {
             "label": "uint256"
           },
-          "t_mapping(t_address,t_uint256)": {
-            "label": "mapping(address => uint256)"
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
           },
           "t_address": {
             "label": "address"
           },
-          "t_mapping(t_address,t_bool)": {
-            "label": "mapping(address => bool)"
-          },
           "t_bool": {
             "label": "bool"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
           },
           "t_uint64": {
             "label": "uint64"
@@ -318,6 +1007,1208 @@
               "label": "_owner",
               "type": "t_address",
               "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC20": [
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:38"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:40"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:42"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:44"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:45"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "ed10e6c30b7bf42aad2f48d62c110935581caf1b46d78e70e0d71361cbd19864": {
+      "address": "0x3ee7D1A3AFD16edF40B70b66f9213d86e7e1FD73",
+      "txHash": "0x21d37b84a8b301b0a6924965ace1748d4a293f5880523b4da2573e9bbf56736c",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "contract": "CCFToken",
+            "label": "minimumFees",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "src": "../project:/contracts/CCFToken.sol:12"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "protocolFeePercentage",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:14"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalProtocolFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:16"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalBridgeFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:18"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "contractBlockchainIndex",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:20"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "blacklist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFToken.sol:22"
+          }
+        ],
+        "types": {
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC20": [
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:38"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:40"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:42"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:44"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:45"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "a0256ff92aae6245c47480d46dcd86857a02230304378930ede1657e09764dac": {
+      "address": "0x2Fc6b0B5D933Ef7e6493F1fE80358f5F0E03FA55",
+      "txHash": "0x57382d5cb2a2f4149d2b62675ae4d6c30712682bbe7b6ce2feabee98eeb2be9e",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "contract": "CCFToken",
+            "label": "minimumFees",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "src": "../project:/contracts/CCFToken.sol:12"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "protocolFeePercentage",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:14"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalProtocolFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:16"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalBridgeFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:18"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "contractBlockchainIndex",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:20"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "blacklist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFToken.sol:22"
+          }
+        ],
+        "types": {
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC20": [
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:38"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:40"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:42"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:44"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:45"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "191d24aa88cb2cfcbe19638455dde9f5cfd8dfd949521f5556a1f92a1b58b639": {
+      "address": "0x63110165758F0c43229E7AcD4fACEbACbB35aE64",
+      "txHash": "0xa48a0f78d3f9fa64eba59b69eed3ab724a1e11fe16d377d6a82679553a5ef4fe",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "contract": "CCFToken",
+            "label": "minimumFees",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "src": "../project:/contracts/CCFToken.sol:12"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "protocolFeePercentage",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:14"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalProtocolFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:16"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalBridgeFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:18"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "contractBlockchainIndex",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:20"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "blacklist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFToken.sol:22"
+          }
+        ],
+        "types": {
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC20": [
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:38"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:40"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:42"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:44"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:45"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "65b8ccd97f73ccd8a46e3a3c1055780327309d30f8fbd0bc8d61afccf54b0cab": {
+      "address": "0x151b3a84746a23aD7AeA61d3Eb61ff4E2E247F38",
+      "txHash": "0xc1b602d146ca4b12bff13836ae90d9781d02eb76dbe5882a775eb57e38c33cab",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "contract": "CCFToken",
+            "label": "minimumFees",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "src": "../project:/contracts/CCFToken.sol:12"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "protocolFeePercentage",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:14"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalProtocolFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:16"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalBridgeFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:18"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "contractBlockchainIndex",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:20"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "blacklist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFToken.sol:22"
+          }
+        ],
+        "types": {
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC20": [
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:38"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:40"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:42"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:44"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:45"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "482cfc0a49a1b99f14fda541437f1e33cd95190be5337b01b09da1d12e97e5d2": {
+      "address": "0x7cA919390029792f8D0b9d94aC999A23Dca91803",
+      "txHash": "0x25361a5b5e610e61d6bee19573761139ca4e22a62a1055a923f40028e8b9490c",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "contract": "CCFToken",
+            "label": "minimumFees",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "src": "../project:/contracts/CCFToken.sol:12"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "protocolFeePercentage",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:14"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalProtocolFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:16"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalBridgeFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:18"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "contractBlockchainIndex",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:20"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "blacklist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFToken.sol:22"
+          }
+        ],
+        "types": {
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC20": [
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:38"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:40"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:42"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:44"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:45"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "9e1ce1e8adcca34dabce9659002b3601979506173fa5c1bb2b4d61732b3d0a0b": {
+      "address": "0xaC75c1Ca24d8BCA11355945E1C94119ae163bfAb",
+      "txHash": "0x42d7fddef6d33b71cc0889ca9010de46d2057f03874b1fcb832118a43cc9c57c",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "contract": "CCFToken",
+            "label": "minimumFees",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "src": "../project:/contracts/CCFToken.sol:12"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "protocolFeePercentage",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:14"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalProtocolFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:16"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalBridgeFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:18"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "contractBlockchainIndex",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:20"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "blacklist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFToken.sol:22"
+          }
+        ],
+        "types": {
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC20": [
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:38"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:40"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:42"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:44"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:45"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "4136939533f33a26490883d20b7120c0b20040db68993ead568c20f8aa26fec0": {
+      "address": "0x73020309d2cbcBC6fF8549d8E8114051e0676198",
+      "txHash": "0x509c3795ed09f6ba0eafa1bc1cead32a7ffdc99ceb1ed8c7cd041ce35670717c",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "contract": "CCFToken",
+            "label": "minimumFees",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "src": "../project:/contracts/CCFToken.sol:12"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "protocolFeePercentage",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:14"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalProtocolFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:16"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalBridgeFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:18"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "contractBlockchainIndex",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:20"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "blacklist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFToken.sol:22"
+          }
+        ],
+        "types": {
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC20": [
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:38"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:40"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:42"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:44"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:45"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "3667a5bdf46559ec8d79cb1e2c5ebc946f14b653cf5681ed3e0677df5c76f43a": {
+      "address": "0x042738C2F78DB3Dd4d313B1601C4C4eC147B75ab",
+      "txHash": "0xfa7d615a5d77ab013e64befaf1055ceeb27f868f8a0b11889c6c96fee11539ac",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "contract": "CCFToken",
+            "label": "minimumFees",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "src": "../project:/contracts/CCFToken.sol:12"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "protocolFeePercentage",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:14"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalProtocolFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:16"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalBridgeFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:18"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "contractBlockchainIndex",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:20"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "blacklist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFToken.sol:22"
+          }
+        ],
+        "types": {
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC20": [
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:38"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:40"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:42"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:44"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:45"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "44c0c060232643fbb4a62e37f70604139c4d81ca5d0518cd0f18195c06de5e85": {
+      "address": "0x5a4B2e80648935cdb509a511f30A705e26ced4b3",
+      "txHash": "0x44877f8d234c25883106c2626ed232808f9459b67a51a1d73a46f392db627a09",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "contract": "CCFToken",
+            "label": "minimumFees",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "src": "../project:/contracts/CCFToken.sol:12"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "protocolFeePercentage",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:14"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalProtocolFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:16"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "totalBridgeFees",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:18"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "contractBlockchainIndex",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken.sol:20"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "blacklist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFToken.sol:22"
+          }
+        ],
+        "types": {
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC20": [
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:38"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:40"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:42"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:44"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:45"
             }
           ],
           "erc7201:openzeppelin.storage.Initializable": [

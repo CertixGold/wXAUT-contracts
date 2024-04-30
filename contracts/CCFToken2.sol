@@ -7,7 +7,7 @@ import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 //Cross-Chain Foundation Token
-contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, OwnableUpgradeable {
+contract CCFToken2 is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, OwnableUpgradeable {
     // Mapping to store minimum fees for each blockchain
     mapping(uint256 => uint256) public minimumFees;
     // Protocol fee percentage with four decimal places (e.g., 10000 represents 1%)
@@ -17,21 +17,25 @@ contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
     // Total accumulated bridge fees
     uint256 public totalBridgeFees;
     //Blockchain which hosts the contract
-    uint256 contractBlockchainIndex;
+    uint256 public contractBlockchainIndex;
     // Blacklist of addresses
     mapping(address => bool) public blacklist;
+    uint8 private decimalsNumber;
+
 
     event BridgeEvent(address indexed user, uint256 amount, uint256 protocolFee, uint256 bridgeFee, uint256 blockchainIndex);
 
     constructor() {}
 
-    function initialize(string memory _name, string memory _symbol, uint256 _contractBlockchainIndex) public initializer {
+    function initialize(string memory _name, string memory _symbol, uint256 _contractBlockchainIndex, uint8 _decimals) public initializer {
         __ERC20_init(_name, _symbol); // Initialisation du nom et du symbole du token
         __ERC20Burnable_init(); // Initialisation de ERC20Burnable
         __Ownable_init(msg.sender);
 
         protocolFeePercentage = 3000; //0.3%
         updateContractBlockchainIndex(_contractBlockchainIndex);
+
+        decimalsNumber = _decimals;
     }
 
     function mint(address to, uint256 amount) public onlyOwner {
@@ -118,5 +122,9 @@ contract CCFToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
     // Remove an address from the blacklist
     function removeFromBlacklist(address _address) external onlyOwner {
         blacklist[_address] = false;
+    }
+
+    function decimals() public view virtual override returns (uint8) {
+        return decimalsNumber;  
     }
 }

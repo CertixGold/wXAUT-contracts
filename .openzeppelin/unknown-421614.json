@@ -1,69 +1,69 @@
 {
   "manifestVersion": "3.2",
   "admin": {
-    "address": "0x81C655ed98EdE8056734BA013fC9aBa22B6104C5",
-    "txHash": "0xff131a915661ab9c2eeb3dde499f57f1713a69af24886414b7c031f7ee2a749b"
+    "address": "0x8D1105d752DC280fdAf4145f20Db860824d102E8",
+    "txHash": "0xd2e7f0f19d69a0b600d13ee6988a5c7263a7d1299111adc29bb73cab4f3a0cfe"
   },
   "proxies": [
     {
-      "address": "0x67B3a3eb07E3dF549CD90377792aC10959AF9443",
-      "txHash": "0xf1436f3bd386ce8308135b1bbe4c9c0dc5ec7e7cf2cee197f0a193b5b32138fe",
+      "address": "0x8e75160561EC7Bf971aE84F29134c9d01c938193",
+      "txHash": "0x12c65b7a24a4279771f62f283a842bc3bceb2d36fad97ba68002c3bca50e947f",
       "kind": "transparent"
     },
     {
-      "address": "0xD9EB86969ddF7D59Cbdb705d67bc5acDDE90D3Db",
-      "txHash": "0x25486ca0be3457b563d983dab5d988c3bd5e055b00a89ce1872ec9bf977aec8b",
+      "address": "0xBF8567237Cee2ced478E3039ddB907c4E1175e9d",
+      "txHash": "0x6d8614f2d0d59d407eb91d76e70f6847c56977d83c3a396bd6a8c358a9b49240",
       "kind": "transparent"
     }
   ],
   "impls": {
-    "38df1148ec3cddbfe52a1124e8e6f0278b042710c8d9860d893bce69c7f960da": {
-      "address": "0xea7065166262A0a935513dCf51e35Cb9F3f07976",
-      "txHash": "0xb969ceecc77886d1b62f3280e82ad6e61785b70b766ec7b2b01b2d2ffc809b1e",
+    "96c6fbd6c937ff78d55b13166ed5ce0f2779b8854be97010abe665909353105c": {
+      "address": "0xD7C918899AC4d0f66C86a9BBeaA4136953E8847B",
+      "txHash": "0xf93e18046e5b1d0eadf24ac8a02dd4cbecbf5358819742c3ed120a3798fa248e",
       "layout": {
         "solcVersion": "0.8.20",
         "storage": [
           {
-            "contract": "CCFBridge",
+            "contract": "CCFToken2",
             "label": "minimumFees",
             "type": "t_mapping(t_uint256,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:16"
+            "src": "../project:/contracts/CCFToken2.sol:12"
           },
           {
-            "contract": "CCFBridge",
+            "contract": "CCFToken2",
             "label": "protocolFeePercentage",
             "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridge.sol:18"
+            "src": "../project:/contracts/CCFToken2.sol:14"
           },
           {
-            "contract": "CCFBridge",
+            "contract": "CCFToken2",
             "label": "totalProtocolFees",
-            "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:20"
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken2.sol:16"
           },
           {
-            "contract": "CCFBridge",
+            "contract": "CCFToken2",
             "label": "totalBridgeFees",
-            "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:22"
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFToken2.sol:18"
           },
           {
-            "contract": "CCFBridge",
-            "label": "lockedBalance",
-            "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:24"
-          },
-          {
-            "contract": "CCFBridge",
+            "contract": "CCFToken2",
             "label": "contractBlockchainIndex",
             "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridge.sol:26"
+            "src": "../project:/contracts/CCFToken2.sol:20"
           },
           {
-            "contract": "CCFBridge",
-            "label": "protocolFeeDivider",
-            "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridge.sol:28"
+            "contract": "CCFToken2",
+            "label": "blacklist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFToken2.sol:22"
+          },
+          {
+            "contract": "CCFToken2",
+            "label": "decimalsNumber",
+            "type": "t_uint8",
+            "src": "../project:/contracts/CCFToken2.sol:23"
           }
         ],
         "types": {
@@ -73,17 +73,29 @@
           "t_uint256": {
             "label": "uint256"
           },
-          "t_mapping(t_address,t_uint256)": {
-            "label": "mapping(address => uint256)"
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
           },
           "t_address": {
             "label": "address"
           },
-          "t_uint64": {
-            "label": "uint64"
-          },
           "t_bool": {
             "label": "bool"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint64": {
+            "label": "uint64"
           }
         },
         "namespaces": {
@@ -93,6 +105,38 @@
               "label": "_owner",
               "type": "t_address",
               "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC20": [
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:38"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:40"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:42"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:44"
+            },
+            {
+              "contract": "ERC20Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "../@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol:45"
             }
           ],
           "erc7201:openzeppelin.storage.Initializable": [
@@ -112,9 +156,9 @@
         }
       }
     },
-    "849aadcce294be72ac325d30a80541d9b404961e9b69458e432f3957ad2e6a9d": {
-      "address": "0x83BDd006Efa7E286feb8c23643E3eB7b75d720E2",
-      "txHash": "0x210d6870c8f4aadbed93c3acd4e05b0b0ddacf3f1f25a73ea466ef7e154f7834",
+    "c462669be229baed87b6d53c50175537f64a20baa278310f595537bc30718255": {
+      "address": "0x768CfF425E21C232Ff67124744Ba822245F8C622",
+      "txHash": "0x9d3d2dae3e53962ea458c2161f660257a4d818a4e5cdbcb89bb32fcc4debe31b",
       "layout": {
         "solcVersion": "0.8.20",
         "storage": [
@@ -147,6 +191,12 @@
             "label": "contractBlockchainIndex",
             "type": "t_uint256",
             "src": "../project:/contracts/CCFToken.sol:20"
+          },
+          {
+            "contract": "CCFToken",
+            "label": "blacklist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFToken.sol:22"
           }
         ],
         "types": {
@@ -156,8 +206,14 @@
           "t_uint256": {
             "label": "uint256"
           },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
           "t_address": {
             "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
           },
           "t_mapping(t_address,t_uint256)": {
             "label": "mapping(address => uint256)"
@@ -170,9 +226,6 @@
           },
           "t_uint64": {
             "label": "uint64"
-          },
-          "t_bool": {
-            "label": "bool"
           }
         },
         "namespaces": {

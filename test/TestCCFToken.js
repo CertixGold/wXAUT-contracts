@@ -12,7 +12,7 @@ function log(text){
 contract("CCFToken", function ([owner, user]) {
     const bridgeAmount = web3.utils.toWei('10', 'ether');
     const bridgeFee = web3.utils.toWei('0.00015', 'ether');
-    const protocolPercent = 0.002;
+    const protocolPercent = 0.003;
 
     beforeEach(async function () {
         // Deploy the bridge as an upgradable proxy
@@ -28,6 +28,7 @@ contract("CCFToken", function ([owner, user]) {
 
     
     it('Mint, Bridge and Test fee', async function () {
+        console.log("OK1")
         // Provision the user with XAUT tokens and approve the bridge to transfer
         await this.wxautToken.mint(user, bridgeAmount, { from: owner });
 
@@ -46,16 +47,14 @@ contract("CCFToken", function ([owner, user]) {
         expect(receiptLock.logs[2].event).equal("BridgeEvent")
         
         // Test protocol fee
-        const totalProtocolFees = await this.wxautToken.totalProtocolFees();
+        var totalProtocolFees = await this.wxautToken.totalProtocolFees();
         log("totalProtocolFees : " + web3.utils.fromWei(totalProtocolFees, 'ether'))
         expect(totalProtocolFees.toString()).equal((bridgeAmount * protocolPercent).toString());
 
         // Test bridge fee
-        const totalBridgeFees = await this.wxautToken.totalBridgeFees();
+        totalBridgeFees = await this.wxautToken.totalBridgeFees();
         log("totalBridgeFees : " + web3.utils.fromWei(totalBridgeFees, 'ether'))
         expect(totalBridgeFees.toString()).equal(bridgeFee);
-
-        
         
         // Verify that all tokens have been transferred to the bridge contract
         const bridgeBalance = await this.wxautToken.balanceOf(this.wxautToken.address);
@@ -66,10 +65,22 @@ contract("CCFToken", function ([owner, user]) {
         const userBalance = await this.wxautToken.balanceOf(user);
         log("userBalance : " + web3.utils.fromWei(userBalance, 'ether'))
         expect(userBalance.toString()).equal("0");
+
+        //Withdraw protocol fees
+        await this.wxautToken.withdrawProtocolFees(owner, totalProtocolFees, { from: owner });
+        totalProtocolFees = await this.wxautToken.totalProtocolFees();
+        log("totalProtocolFees after withdraw : " + web3.utils.fromWei(totalProtocolFees, 'ether'))
+        expect(totalProtocolFees.toString()).equal("0");
+
+        //Withdraw bridge fees
+        await this.wxautToken.withdrawBridgeFees(owner, totalBridgeFees, { from: owner });
+        totalBridgeFees = await this.wxautToken.totalBridgeFees();
+        log("totalBridgeFees after withdraw : " + web3.utils.fromWei(totalBridgeFees, 'ether'))
+        expect(totalBridgeFees.toString()).equal("0");
     })
 
     it('Update protocolFeePercentage', async function () {
-        const protocolFeesToUpdate = 3000
+        const protocolFeesToUpdate = 4000
         await this.wxautToken.updateProtocolFeePercentage(protocolFeesToUpdate, { from: owner });
 
         const protocolFeePercentage = await this.wxautToken.protocolFeePercentage();

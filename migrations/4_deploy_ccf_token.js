@@ -1,10 +1,10 @@
 const { deployProxy, upgradeProxy } = require('@openzeppelin/truffle-upgrades');
 const CCFToken = artifacts.require('CCFToken');
-const FIRST = false
+const FIRST = true
 
 if(FIRST){
     module.exports = async function (deployer) {
-        const ethereumNetworkId = 1;//1 ARB, 2 BSC, 3 POLYGON
+        const ethereumNetworkId = 3;//1 ARB, 2 POLYGON, 3 BSC
         await deployProxy(CCFToken, ["WXAUT", "WXAUT", ethereumNetworkId], { deployer, initializer: 'initialize' });
     };
 }else{

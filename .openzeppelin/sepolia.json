@@ -1,114 +1,20 @@
 {
   "manifestVersion": "3.2",
   "admin": {
-    "address": "0x4417E577B2B9bd97dC0DFa422a8814511Da5b524",
-    "txHash": "0x369db135361b04e2db57b828823fb323c7dc38846df93e7f78809cf90a0cfeed"
+    "address": "0x33d4cC37480cE4133F826C02C672C0397d3344C3",
+    "txHash": "0x56a3d171a2276f9618f1985c939cf719d8d7e9c07d57c9f002d3cfcb91cacd18"
   },
   "proxies": [
     {
-      "address": "0xaB9C06534cDbd6687CF2baF2DDD2BA06848EE51C",
+      "address": "0xa513Ce5DCAC3d11eCF0E5500DC982Bd3E3D6f097",
+      "txHash": "0xcadedce4ab13155c4ba9f962cbce31dbcc5827609d6b6d5c0e059e16d5186df9",
       "kind": "transparent"
     }
   ],
   "impls": {
-    "38df1148ec3cddbfe52a1124e8e6f0278b042710c8d9860d893bce69c7f960da": {
-      "address": "0xfFB1F7566cC861Ae5942fff69285CCfaA1B17f7e",
-      "txHash": "0x50db2c0d184de25a18e4b80e4257f59dd48687f0bbf979f3280d4131078fd794",
-      "layout": {
-        "solcVersion": "0.8.20",
-        "storage": [
-          {
-            "contract": "CCFBridge",
-            "label": "minimumFees",
-            "type": "t_mapping(t_uint256,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:16"
-          },
-          {
-            "contract": "CCFBridge",
-            "label": "protocolFeePercentage",
-            "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridge.sol:18"
-          },
-          {
-            "contract": "CCFBridge",
-            "label": "totalProtocolFees",
-            "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:20"
-          },
-          {
-            "contract": "CCFBridge",
-            "label": "totalBridgeFees",
-            "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:22"
-          },
-          {
-            "contract": "CCFBridge",
-            "label": "lockedBalance",
-            "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridge.sol:24"
-          },
-          {
-            "contract": "CCFBridge",
-            "label": "contractBlockchainIndex",
-            "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridge.sol:26"
-          },
-          {
-            "contract": "CCFBridge",
-            "label": "protocolFeeDivider",
-            "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridge.sol:28"
-          }
-        ],
-        "types": {
-          "t_mapping(t_uint256,t_uint256)": {
-            "label": "mapping(uint256 => uint256)"
-          },
-          "t_uint256": {
-            "label": "uint256"
-          },
-          "t_mapping(t_address,t_uint256)": {
-            "label": "mapping(address => uint256)"
-          },
-          "t_address": {
-            "label": "address"
-          },
-          "t_uint64": {
-            "label": "uint64"
-          },
-          "t_bool": {
-            "label": "bool"
-          }
-        },
-        "namespaces": {
-          "erc7201:openzeppelin.storage.Ownable": [
-            {
-              "contract": "OwnableUpgradeable",
-              "label": "_owner",
-              "type": "t_address",
-              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
-            }
-          ],
-          "erc7201:openzeppelin.storage.Initializable": [
-            {
-              "contract": "Initializable",
-              "label": "_initialized",
-              "type": "t_uint64",
-              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
-            },
-            {
-              "contract": "Initializable",
-              "label": "_initializing",
-              "type": "t_bool",
-              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
-            }
-          ]
-        }
-      }
-    },
-    "dc81b4844fe468201faa88abfa5a514f8f39e3544325ed5549ca50ab6639554b": {
-      "address": "0xf674dBb3A226Bb1bAa6E84f45cEDab7A0e4c8D74",
-      "txHash": "0x843ecdcc19eda78479a2e805740a902f22969c6a7fbf22e38691ce51ccc6e128",
+    "71cef4d0f8c52e2096168282187255f8c087c569c414ead117a4f1af3c3abef8": {
+      "address": "0x1ac2646A45f9bfa62Ecf04cF184E2621069c8635",
+      "txHash": "0xfad165438f008e9527c1c1f7a1cbbba0642eaad39c223f5045234d8239a764e5",
       "layout": {
         "solcVersion": "0.8.20",
         "storage": [
@@ -159,6 +65,12 @@
             "label": "tokenWhitelist",
             "type": "t_mapping(t_address,t_bool)",
             "src": "../project:/contracts/CCFBridge.sol:31"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "minimumFeesToken",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
+            "src": "../project:/contracts/CCFBridge.sol:33"
           }
         ],
         "types": {
@@ -179,6 +91,235 @@
           },
           "t_bool": {
             "label": "bool"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
+            "label": "mapping(address => mapping(uint256 => uint256))"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "2293fa39f38f1847e9a5aa3afd7711fa7173a3506e8790543f94449f1327605d": {
+      "address": "0x5D5f5Cac9A9097bDbE515f405E89a3685D5634B8",
+      "txHash": "0xb5a6a4c9324bae36b9c4fd8e34d247b68c41aa89a070cb7976280ffd39fdda9c",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "contract": "CCFBridge",
+            "label": "minimumFees",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:17"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "protocolFeePercentage",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFBridge.sol:19"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "totalProtocolFees",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:21"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "totalBridgeFees",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:23"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "lockedBalance",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:25"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "contractBlockchainIndex",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFBridge.sol:27"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "protocolFeeDivider",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFBridge.sol:29"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "tokenWhitelist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFBridge.sol:31"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "minimumFeesToken",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
+            "src": "../project:/contracts/CCFBridge.sol:33"
+          }
+        ],
+        "types": {
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
+            "label": "mapping(address => mapping(uint256 => uint256))"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "6382580dc23872f7527e178c4365fe7e4bcb775c4ecb4d547660757c27044346": {
+      "address": "0x4A65487966f0873fD6bED23007C1840C913D1192",
+      "txHash": "0xbcd88b4b5a270aaa5623f908742a002b484a008d7916c87bbdfda1c58914d0e5",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "contract": "CCFBridge",
+            "label": "minimumFees",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:17"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "protocolFeePercentage",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFBridge.sol:19"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "totalProtocolFees",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:21"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "totalBridgeFees",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:23"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "lockedBalance",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/CCFBridge.sol:25"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "contractBlockchainIndex",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFBridge.sol:27"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "protocolFeeDivider",
+            "type": "t_uint256",
+            "src": "../project:/contracts/CCFBridge.sol:29"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "tokenWhitelist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/CCFBridge.sol:31"
+          },
+          {
+            "contract": "CCFBridge",
+            "label": "minimumFeesToken",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
+            "src": "../project:/contracts/CCFBridge.sol:33"
+          }
+        ],
+        "types": {
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
+            "label": "mapping(address => mapping(uint256 => uint256))"
           },
           "t_uint64": {
             "label": "uint64"
@@ -211,64 +352,64 @@
       }
     },
     "8b4698a48a5ec603218e836d8a430705a7888d0f18261a2719b76774d5a28880": {
-      "address": "0x8bEE272Fa7DDb4F16C0AA70a9D74283dfE60218F",
-      "txHash": "0xc35d2b7f442cb74899fcf6a77d2067f77ea306eb3b6fff671571da7f74db25ef",
+      "address": "0x902E887b393811bd39494cBf132A8704f64576d3",
+      "txHash": "0xa7c0b9e7e23aba9b9f7b592d75a9ef72e87dd20892be5ae7ac7c3ec31bf74b5a",
       "layout": {
         "solcVersion": "0.8.20",
         "storage": [
           {
-            "contract": "CCFBridgeV2",
+            "contract": "CCFBridge",
             "label": "minimumFees",
             "type": "t_mapping(t_uint256,t_uint256)",
-            "src": "../project:/contracts/CCFBridgeV2.sol:17"
+            "src": "../project:/contracts/CCFBridge.sol:17"
           },
           {
-            "contract": "CCFBridgeV2",
+            "contract": "CCFBridge",
             "label": "protocolFeePercentage",
             "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridgeV2.sol:19"
+            "src": "../project:/contracts/CCFBridge.sol:19"
           },
           {
-            "contract": "CCFBridgeV2",
+            "contract": "CCFBridge",
             "label": "totalProtocolFees",
             "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridgeV2.sol:21"
+            "src": "../project:/contracts/CCFBridge.sol:21"
           },
           {
-            "contract": "CCFBridgeV2",
+            "contract": "CCFBridge",
             "label": "totalBridgeFees",
             "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridgeV2.sol:23"
+            "src": "../project:/contracts/CCFBridge.sol:23"
           },
           {
-            "contract": "CCFBridgeV2",
+            "contract": "CCFBridge",
             "label": "lockedBalance",
             "type": "t_mapping(t_address,t_uint256)",
-            "src": "../project:/contracts/CCFBridgeV2.sol:25"
+            "src": "../project:/contracts/CCFBridge.sol:25"
           },
           {
-            "contract": "CCFBridgeV2",
+            "contract": "CCFBridge",
             "label": "contractBlockchainIndex",
             "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridgeV2.sol:27"
+            "src": "../project:/contracts/CCFBridge.sol:27"
           },
           {
-            "contract": "CCFBridgeV2",
+            "contract": "CCFBridge",
             "label": "protocolFeeDivider",
             "type": "t_uint256",
-            "src": "../project:/contracts/CCFBridgeV2.sol:29"
+            "src": "../project:/contracts/CCFBridge.sol:29"
           },
           {
-            "contract": "CCFBridgeV2",
+            "contract": "CCFBridge",
             "label": "tokenWhitelist",
             "type": "t_mapping(t_address,t_bool)",
-            "src": "../project:/contracts/CCFBridgeV2.sol:31"
+            "src": "../project:/contracts/CCFBridge.sol:31"
           },
           {
-            "contract": "CCFBridgeV2",
+            "contract": "CCFBridge",
             "label": "minimumFeesToken",
             "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
-            "src": "../project:/contracts/CCFBridgeV2.sol:33"
+            "src": "../project:/contracts/CCFBridge.sol:33"
           }
         ],
         "types": {
